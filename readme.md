@@ -122,7 +122,10 @@ Write briefly under the following headings:
 # TO DO
 
 - [ ] finish wireframe and upload it to moodle 
-- [ ] create a github repo 
+- [x] create a github repo 
+- [ ] choose a name for site 
+    - [ ] Good Games 
+    - [ ] Gamers Delight
 - [ ] decide on the colour scheme for the site 
 - [ ] choose a name for site 
 - [ ] create a logo in canva 
