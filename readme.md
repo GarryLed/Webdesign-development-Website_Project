@@ -118,5 +118,22 @@ Write briefly under the following headings:
 #### Did you do anything in this project that was not covered in this module, maybe it was covered in another module? Maybe you applied something you learning from your own research?
 
 - Dark mode 
+----
 
+# TO DO
 
+- [ ] finish wireframe and upload it to moodle 
+- [ ] create a github repo 
+- [ ] decide on the colour scheme for the site 
+- [ ] choose a name for site 
+- [ ] create a logo in canva 
+- [ ] gather up 6 products for each section of site 
+- [ ] take pictures of wireframes and add them to readme page 
+- [ ] take stock photos of products 
+- [ ] resize images and add them to images folder 
+- [ ] build out nav for entire site 
+- [ ] abuild out footer for entire site 
+- [ ] build out sections for home page 
+- [ ] research how to build a shopping cart 
+- [ ] create a json file to store data 
+- [ ] build out the products page 
