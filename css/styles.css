@@ -275,3 +275,7 @@ table td {
     text-decoration: none;
     border-radius: 20px;
 }
+
+.card {
+    margin: 20px;
+}
