@@ -120,3 +120,9 @@ Write briefly under the following headings:
 - Dark mode 
 
 
+# Bugs
+- [x] Fixed
+Login/Logout is not wroking as exptected on every page (added custom JavaScript script to each page)
+
+- [ ] Fixed
+Login/Logout not working on pages in dropdown menu (ps5/games...) This is a file path issue 

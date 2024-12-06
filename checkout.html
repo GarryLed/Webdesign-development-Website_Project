@@ -60,15 +60,15 @@
                     <li class="nav-item m-1">
                         <a class="nav-link" href="/about.html">ABOUT</a>
                     </li>
-                    <li class="nav-item m-1">
-                      <a class="nav-link" href="/login.html">LOGIN</a>
-                      <!--NEED TO TOGGLE THIS TO LOGOUT WHEN USER IS LOGGED IN-->
+                    <!-- Added JavaScript event listener to toggle user details-->
+                    <li class="nav-item m-1" >
+                        <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item d-none m-1" id="userdetails">
+                      <a class="nav-link" href="/userdetails.html">USER DETAILS</a>
                   </li>
-                  <li class="nav-item m-1">
-                    <a class="nav-link" href="/userdetails.html">REGISTER</a>
-                </li>
-                </ul> 
-            </div> <!-- End of hamburger content-->
+                  </ul> 
+              </div> <!-- End of hamburger content-->
 
             <!-- Login/Register and Cart icons -->
             <div class="d-flex ms-auto align-items-center">
@@ -172,6 +172,7 @@
 </main>
 <script src="/js/checkout.js"></script> 
 <script src="/js/custom.js"></script> 
+<script src="js/login.js"></script>
 
     <!-- Bootstrap footer -->
     <footer>
@@ -186,7 +187,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js" async defer></script>
+
 </body>
 
 </html>

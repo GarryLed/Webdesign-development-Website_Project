@@ -1,5 +1,7 @@
 // checkout.js
 
+
+
 var checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
 

@@ -6,6 +6,8 @@ var addtocart = document.getElementById('addtocart');
 // add a listener for add to cart if such a button id is pressed
 addtocart.addEventListener("click", addToCart);
 
+console.log(addtocart) // for testing 
+
 
 function addToCart() {
     var total=localStorage.getItem('checkout');
