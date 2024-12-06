@@ -22,13 +22,7 @@
             <!-- Content that goes inside hamburger menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
-                <!-- Search bar for larger screens -->
-                <div class="w-100 d-none d-md-block my-2">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search games, consoles, accessories..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+                
 
                 <!-- Navigation items -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -58,26 +52,28 @@
                         </div>
                     </li>
                     <li class="nav-item m-1">
-                      <a class="nav-link" href="contact.html">ACCESSORIES</a>
+                      <a class="nav-link" href="/accessories.html">ACCESSORIES</a>
                   </li>
                     <li class="nav-item m-1">
-                        <a class="nav-link" href="contact.html">CONTACT</a>
+                        <a class="nav-link" href="/contact.html">CONTACT</a>
                     </li>
                     <li class="nav-item m-1">
-                        <a class="nav-link" href="about.html">ABOUT</a>
+                        <a class="nav-link" href="/about.html">ABOUT</a>
                     </li>
+                    <li class="nav-item m-1">
+                      <a class="nav-link" href="/login.html">LOGIN</a>
+                      <!--NEED TO TOGGLE THIS TO LOGOUT WHEN USER IS LOGGED IN-->
+                  </li>
+                  <li class="nav-item m-1">
+                    <a class="nav-link" href="/userdetails.html">REGISTER</a>
+                </li>
                 </ul> 
             </div> <!-- End of hamburger content-->
 
             <!-- Login/Register and Cart icons -->
             <div class="d-flex ms-auto align-items-center">
-              <a class="icon-link me-3" href="login.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" aria-hidden="true">
-                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                </svg>
-                <span class="visually-hidden">Login/Register</span>
-              </a>
-              <a class="icon-link me-3" href="cart.html">
+             
+              <a class="icon-link me-3" href="checkout.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
                   <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                   <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
@@ -94,79 +90,88 @@
             </button>
             </div>
           
-          <!-- Search bar -->
-          <div class="w-100 d-md-none my-2">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search games, consoles, accessories..." aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-           </div>
+          
        
     </nav>
 
 <!-- Main section -->
 <main>
-
-    <h1>Checkout</h1>
-    <div>    
-        <div> 
-          <form name="checkout" id="user-checkout" action="" method="get">
-                <fieldset>
-                    <legend>Delivery Details</legend>
-                   
-                        <label for="getFirstName">First name</label>
-                        <input type="text"  id="getFirstName" name="firstname" value="firstname" required>
-                 
+  <div class="container py-4">
+    <h2 class="text-center mb-4">Checkout</h2>
+<!--Checkout --> 
+  <div class="container">
+    <div class="row mt-5" >
+        <div class="col-md-4 mb-4 order-md-2" style="background: yellowgreen;">
+          <h4>
+            <span class="text-muted">Shopping Cart</span>
+            <span class="badge badge-secondary">Total Items</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between-align-items-center">
+              dynamically add products here
+            </li>   
+          </ul>
+        </div>
+        <div class="col-md-8 mb-4 order-md-1" style="background: skyblue;">
+            <h4 class="mb-3">Delivery Details</h4>
+            <div> 
+              <form name="checkout" id="user-checkout" action="" method="get">
+                    <fieldset>
+                       
+                       
+                            <label for="getFirstName">First name</label>
+                            <input type="text"  id="getFirstName" name="firstname" value="firstname" required><br>
+                     
+                      
+                            <label for="getLastName">Last name</label>
+                            <input type="text" c id="getLastName" name="lastname" value="surname" required><br>
+                    
+                       
+                            <label for="getAddress1">Addresss</label>
+                            <input type="text"  id="getAddress1" name="address2" value="address 1" required><br>
                   
-                        <label for="getLastName">Last name</label> 
-                        <input type="text" c id="getLastName" name="lastname" value="surname" required>
-                
-                   
-                        <label for="getAddress1">Addresss</label> 
-                        <input type="text"  id="getAddress1" name="address2" value="address 1" required>
-              
+                      
+                            <label for="getAddress2">Addresss</label> 
+                            <input type="text" id="getAddress2" name="address2"  value="address 2"  required><br>
+                       
+                      
+                            <label for="getAddress3">Addresss</label> 
+                            <input type="text"  id="getAddress3" name="address3"  value="address 3"  required><br>
+                    
                   
-                        <label for="getAddress2">Addresss</label> 
-                        <input type="text" id="getAddress2" name="address2"  value="address 2"  required>
-                   
-                  
-                        <label for="getAddress3">Addresss</label> 
-                        <input type="text"  id="getAddress3" name="address3"  value="address 3"  required>
-                
-              
-                <fieldset>
-                    <legend>Payment Details</legend>
-
-                        <label for="getCardName">Card Name</label> 
-                        <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
-             
-                        <label for="getCardNumber">Card Number</label> 
-                        <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
-                   
-                        <label for="getCardCVC">CVC</label> 
-                        <input type="password" " id="cardCvv" name="cardCvv"  required>
-                </fieldset>    
-                <div id="payment-success" role="alert">
-                    Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="shop.html">Shopping Page</a>.
-                </div>
-                <div  id="payment-failure" role="alert">
-                  There seems to be a problem with the card details you entered.
-                </div>                
-                <div>
-                    <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
-                </div>
-            </form>
-
-
-        </div> 
-    </div>   
+                    <fieldset>
+                        <legend>Payment Details</legend>
     
- 
+                            <label for="getCardName">Card Name</label> 
+                            <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required><br>
+                 
+                            <label for="getCardNumber">Card Number</label> 
+                            <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required><br>
+                       
+                            <label for="getCardCVC">CVC</label> 
+                            <input type="password"  id="cardCvv" name="cardCvv"  required><br>
+                    </fieldset>    
+                    <div id="payment-success" role="alert">
+                        Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="index.html">Home Page</a>.
+                    </div>
+                    <div  id="payment-failure" role="alert">
+                      There seems to be a problem with the card details you entered.
+                    </div>                
+                    <div>
+                        <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
+                    </div>
+                </form>
+    
+    
+            </div> 
+        </div>   
+        
+        </div>   
+    </div>
+</div> <!-- End of div containers -->  
 </main>
-
-
-
-   
+<script src="/js/checkout.js"></script> 
+<script src="/js/custom.js"></script> 
 
     <!-- Bootstrap footer -->
     <footer>
@@ -188,57 +193,3 @@
 
 
 
-<h1>Checkout</h1>
-    <div>    
-        <div> 
-          <form name="checkout" id="user-checkout" action="" method="get">
-                <fieldset>
-                    <legend>Delivery Details</legend>
-                   
-                        <label for="getFirstName">First name</label>
-                        <input type="text"  id="getFirstName" name="firstname" value="firstname" required>
-                 
-                  
-                        <label for="getLastName">Last name</label> 
-                        <input type="text" c id="getLastName" name="lastname" value="surname" required>
-                
-                   
-                        <label for="getAddress1">Addresss</label> 
-                        <input type="text"  id="getAddress1" name="address2" value="address 1" required>
-              
-                  
-                        <label for="getAddress2">Addresss</label> 
-                        <input type="text" id="getAddress2" name="address2"  value="address 2"  required>
-                   
-                  
-                        <label for="getAddress3">Addresss</label> 
-                        <input type="text"  id="getAddress3" name="address3"  value="address 3"  required>
-                
-              
-                <fieldset>
-                    <legend>Payment Details</legend>
-
-                        <label for="getCardName">Card Name</label> 
-                        <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
-             
-                        <label for="getCardNumber">Card Number</label> 
-                        <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
-                   
-                        <label for="getCardCVC">CVC</label> 
-                        <input type="password" " id="cardCvv" name="cardCvv"  required>
-                </fieldset>    
-                <div id="payment-success" role="alert">
-                    Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="shop.html">Shopping Page</a>.
-                </div>
-                <div  id="payment-failure" role="alert">
-                  There seems to be a problem with the card details you entered.
-                </div>                
-                <div>
-                    <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
-                </div>
-            </form>
-
-
-        </div> 
-    </div>   
-    

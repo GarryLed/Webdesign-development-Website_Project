@@ -2,6 +2,17 @@
 // some basic functionality for login, checkout, userdetails
 // amend and supplement in your project as you see fit
 
+document.addEventListener('DOMContentLoaded', function () {
+    var loginLogoutElement = document.getElementById('loginlogout');
+    loginLogoutElement.addEventListener('click', function (event) {
+        if (localStorage.getItem('loggedIn') == 1) {
+            event.preventDefault();
+            Logout();
+        }
+    });
+
+    checkLoginStatus();
+});
 
 
 // set the checkout figure
@@ -21,10 +32,11 @@ function Logout() {
 
     // if user is logged in them log them out and redirect to home page
     var loggedin=localStorage.getItem('loggedIn'); 
+    console.log(loggedin)
 
     if (loggedin==1) {
         localStorage.setItem('loggedIn',0);
-        window.location.href = "home.html";
+        window.location.href = "index.html";
     } else {
         window.location.href = "login.html";
     }
@@ -41,14 +53,14 @@ function checkLoginStatus() {
     var element = document.getElementById("userdetails");
     if (loggedin==1) {
         // change the text from Login to Logout
-        document.querySelector('#loginlogout').innerHTML="Logout";
+        document.querySelector('#loginlogout').innerHTML="LOGOUT";
         element.classList.remove("d-none");        
         element.classList.add("d-show");      
     } else{
         // use add to hide the display of User Details
         //element.classList.add("d-none");        
         //element.classList.remove("d-show");
-        document.querySelector('#loginlogout').innerHTML="Login"; 
+        document.querySelector('#loginlogout').innerHTML="LOGIN"; 
         element = document.getElementById("loginlogout");
         element.setAttribute("href", "login.html");
         var element = document.getElementById("userdetails");
