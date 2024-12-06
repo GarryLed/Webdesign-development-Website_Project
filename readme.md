@@ -121,10 +121,10 @@ Write briefly under the following headings:
 
 
 # Bugs
-Login/Logout is not wroking as exptected on every page (added custom JavaScript script to each page)
 - [x] Fixed
+Login/Logout is not wroking as exptected on every page (added custom JavaScript script to each page)
 
+- [x] Fixed
 Login/Logout not working on pages in dropdown menu (ps5/games...) This is a file path issue 
 added relative path and the login/logout is working as expected 
-- [x] Fixed
 
