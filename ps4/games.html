@@ -70,20 +70,22 @@
               </ul> 
           </div> <!-- End of hamburger content-->
 
-          <!-- Login/Register and Cart icons -->
-          <div class="d-flex ms-auto align-items-center">
-           
-            <a class="icon-link me-3" href="checkout.html">
+           <!-- cart icon -->
+           <div class="d-flex ms-auto align-items-center border rounded p-1 m-2">
+             
+            <a class="icon-link me-3" href="/cart.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
                 <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                 <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
               </svg>
               <span class="visually-hidden">Cart</span>
+              <div class="checkout" id="checkout"></div>
             </a>
           </div>
 
-            <!-- Navbar hamburger toggler button -->
-            <!--NOT WORKING AS EXPECTED! i NEED TO COME BACK AND FIX THIS-->
+          <!-- Navbar hamburger toggler button -->
+          <!-- ! NOT WORKING AS EXPECTED! -->
+          <!-- TODO: fix the hamburger menu positioning-->
             <div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,24 +108,24 @@
           <div class="card m-3 p-3" style="width: 18rem;">
             <img src="/images/gta5.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Headphones</h5>
+              <h5 class="card-title">GTA 5</h5>
               <p class="card-text">Call of Dutys newest Game is here.</p>
-              <div class="card-title fw-bold">Price: 39.99</div> <!--Add euro symbol here -->
+              <div class="card-title fw-bold">Price: 69.99</div> <!--Add euro symbol here -->
               <div class="d-flex justify-content-between-align-items-center">
               <a href="ps5/games.html" class="btn btn-primary m-1">Learn More</a>
-              <a href="checkout.html" class="btn btn-primary m-1">Buy Now</a>
+              <a href="/checkout.html" class="btn btn-primary m-1">Buy Now</a>
               </div>
             </div>
           </div>
           <div class="card m-3 p-3" style="width: 18rem;">
             <img src="/images/detroit.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PS5 Controller</h5>
+              <h5 class="card-title">Detroit Become Human</h5>
               <p class="card-text">Call of Dutys newest Game is here.</p>
-              <div class="card-title fw-bold">Price: 29.99</div> <!--Add euro symbol here -->
+              <div class="card-title fw-bold">Price: 59.99</div> <!--Add euro symbol here -->
               <div class="d-flex justify-content-between-align-items-center">
-              <a href="ps5/games.html" class="btn btn-primary m-1">Learn More</a>
-              <a href="checkout.html" class="btn btn-primary m-1">Buy Now</a>
+              <a href="/ps5/games.html" class="btn btn-primary m-1">Learn More</a>
+              <a href="/checkout.html" class="btn btn-primary m-1">Buy Now</a>
               </div>
             </div>
           </div>
@@ -131,7 +133,7 @@
           <div class="card m-3 p-3" style="width: 18rem;">
             <img src="/images/days_gone.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Days Gone 2</h5>
+              <h5 class="card-title">Days Gone</h5>
               <p class="card-text">The greatest game form bend studios has arrived</p>
               <div class="card-title fw-bold">Price: 79.99</div> <!--Add euro symbol here -->
               <div class="d-flex justify-content-between-align-items-center">
@@ -153,7 +155,7 @@
   <div class="container ">
     <div class="row">
       <div class="card m-3 p-3" style="width: 18rem;">
-        <img src="/images/mw2.jpeg" class="card-img-top" alt="...">
+        <img src="/images/ps5box.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">PS4 Console</h5>
           <p class="card-text">Call of Duty's Modern Warfare's best </p>
@@ -165,7 +167,7 @@
         </div>
       </div>
       <div class="card m-3 p-3" style="width: 18rem;">
-        <img src="/images/detroit.jpeg" class="card-img-top" alt="...">
+        <img src="/images/controller.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">PS4 Controller</h5>
           <p class="card-text">Call of Dutys newest Game is here.</p>
@@ -177,7 +179,7 @@
         </div>
       </div>
       <div class="card m-3 p-3" style="width: 18rem;">
-        <img src="/images/gta5.jpeg" class="card-img-top" alt="...">
+        <img src="/images/headphones.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">PS4 Headphones</h5>
           <p class="card-text">Call of Dutys newest Game is here.</p>
