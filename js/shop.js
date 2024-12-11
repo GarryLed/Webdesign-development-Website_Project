@@ -150,6 +150,9 @@ let shopProducts = [
     }
 ]
 
+// array to store shopping cart items 
+let shoppingCart = [];
+
 
 
 // Function to update HTML elements based on product data
@@ -195,10 +198,37 @@ var addtocart = document.getElementById('addtocart');
 addtocart.addEventListener("click", addToCart);
 
 
-function addToCart() {
+
+
+
+// add to cart 
+function addToCart(productId) {
+    // find the product with the matching product id 
+    // ! The id is hardcoded for testing purposes only 
+    const product = shopProducts.find(product => product.id === "1");
+    console.log(product)
+
     var total=localStorage.getItem('checkout');
     total++;
     localStorage.setItem('checkout',total);
     document.querySelector('#checkout').innerHTML=total;
+
+    shoppingCart.push(product);
+    console.log(shoppingCart)
+
 }
+
+// remove from cart function 
+function removeFromCart() {
+
+}
+
+// empty shippting cart 
+function emptyCart() {
+    shoppingCart = [];
+}
+
+
+
+
 
