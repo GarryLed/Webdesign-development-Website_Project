@@ -150,8 +150,8 @@ let shopProducts = [
     }
 ]
 
-// array to store shopping cart items 
-let shoppingCart = [];
+// using localstorage to persist state to store shopping cart items 
+let shoppingCart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
 
 
 
@@ -197,7 +197,7 @@ var addtocart = document.getElementById('addtocart');
 // add a listener for add to cart if such a button id is pressed
 addtocart.addEventListener("click", addToCart);
 
-
+//document.addEventListener('DOMContentLoaded', displayCartItems);
 
 
 
@@ -213,9 +213,50 @@ function addToCart(productId) {
     localStorage.setItem('checkout',total);
     document.querySelector('#checkout').innerHTML=total;
 
+
     shoppingCart.push(product);
+    
     console.log(shoppingCart)
 
+    shoppingCart.forEach(item => {
+        console.log(item.name)
+        
+    })
+
+    displayCartItems()
+
+    
+
+}
+
+// function display cart items 
+function displayCartItems() {
+    const cartContainer = document.getElementById('shopping-cart-items');
+    const cartTotal = document.getElementById('shopping-cart-total');
+   
+    localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+
+    cartContainer.textContent = "";
+
+    console.log('shopping-cart')
+    console.log('test')
+    console.log(shoppingCart)
+    // loop through shopping cart array 
+    shoppingCart.forEach(item => {
+       console.log(item.name)
+
+       const name = document.createElement('h2');
+       name.textContent = item.name;
+
+      const price = document.createElement('h2');
+      price.textContent = item.price;
+
+    emptyCart()
+
+      cartContainer.appendChild(name);
+      cartContainer.appendChild(price);
+
+    })
 }
 
 // remove from cart function 
@@ -225,7 +266,7 @@ function removeFromCart() {
 
 // empty shippting cart 
 function emptyCart() {
-    shoppingCart = [];
+    localStorage.setItem('shopping-cart', JSON.stringify([]));
 }
 
 
