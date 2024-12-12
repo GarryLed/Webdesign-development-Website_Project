@@ -19,16 +19,16 @@ let shopProducts = [
         price: 69.99,
         description: "add description here",
         img: "/images/tlou.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/tlou.html",
         checkout: "/checkout.html"
     },
     {
         id: "3",
-        name: "Days Gone 2",
+        name: "Days Gone",
         price: 69.99,
         description: "add description here",
         img: "/images/days_gone.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/daysgone.html",
         checkout: "/checkout.html"
     },
     {
@@ -37,7 +37,7 @@ let shopProducts = [
         price: 69.99,
         description: "add description here",
         img: "/images/mw2.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/mw2.html",
         checkout: "/checkout.html"
     },
     {
@@ -46,7 +46,7 @@ let shopProducts = [
         price: 59.99,
         description: "add description here",
         img: "/images/gta5.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps4/gta5.html",
         checkout: "/checkout.html"
     },
     {
@@ -55,7 +55,7 @@ let shopProducts = [
         price: 59.99,
         description: "add description here",
         img: "/images/detroit.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps4/dbh.html",
         checkout: "/checkout.html"
     }, 
     {
@@ -64,7 +64,7 @@ let shopProducts = [
         price: 799.99,
         description: "add description here",
         img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5pro.html",
         checkout: "/checkout.html"
     }, 
     {
@@ -73,7 +73,7 @@ let shopProducts = [
         price: 699.99,
         description: "add description here",
         img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5tlouedition.html",
         checkout: "/checkout.html"
     },
     {
@@ -82,34 +82,7 @@ let shopProducts = [
         price: 599.99,
         description: "add description here",
         img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "10",
-        name: "PS4 Pro",
-        price: 599.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "11",
-        name: "PS4 TLOU Edition ",
-        price: 399.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "12",
-        name: "PS4 Slim",
-        price: 399.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5slim.html",
         checkout: "/checkout.html"
     }, 
     {
@@ -118,7 +91,7 @@ let shopProducts = [
         price: 99.99,
         description: "add description here",
         img: "/images/controller.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5controller.html",
         checkout: "/checkout.html"
     },
     {
@@ -127,7 +100,7 @@ let shopProducts = [
         price: 299.99,
         description: "add description here",
         img: "/images/customps5controller.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5customcontroller.html",
         checkout: "/checkout.html"
     },
     {
@@ -136,16 +109,7 @@ let shopProducts = [
         price: 59.99,
         description: "add description here",
         img: "/images/headphones.jpeg",
-        location: "/ps5/bo6ps5.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "16",
-        name: "Days Gone 2",
-        price: 59.99,
-        description: "add description here",
-        img: "/images/days_gone.jpeg",
-        location: "/ps5/bo6ps5.html",
+        location: "/ps5/ps5headphones.html",
         checkout: "/checkout.html"
     }
 ]
@@ -178,6 +142,7 @@ function createProductCards() {
             textElement.textContent = productData.description;
             priceElement.textContent = `Price: €${productData.price}`;
             learnMoreBtn.href = productData.location;
+            console.log(learnMoreBtn.href)
             learnMoreBtn.textContent = `Learn More `
             buyNowBtn.href = productData.checkout;
             buyNowBtn.textContent = `Buy Now`
@@ -190,6 +155,7 @@ function createProductCards() {
 
 // Update product cards on page load
 document.addEventListener('DOMContentLoaded', createProductCards);
+document.addEventListener('DOMContentLoaded', displayCartItems);
 
 document.getElementById('addtocart').addEventListener('click', addToCart )
 
@@ -197,7 +163,6 @@ var addtocart = document.getElementById('addtocart');
 // add a listener for add to cart if such a button id is pressed
 addtocart.addEventListener("click", addToCart);
 
-//document.addEventListener('DOMContentLoaded', displayCartItems);
 
 
 
@@ -241,23 +206,33 @@ function displayCartItems() {
     console.log('shopping-cart')
     console.log('test')
     console.log(shoppingCart)
+
+    // variable to accumulate total price 
+    let totalPrice = 0; 
+
     // loop through shopping cart array 
     shoppingCart.forEach(item => {
-       console.log(item.name)
-
+       
+        totalPrice += item.price; 
+        
        const name = document.createElement('h2');
        name.textContent = item.name;
 
       const price = document.createElement('h2');
-      price.textContent = item.price;
 
-    emptyCart()
+      // TODO: fix this price in the total section 
+      price.textContent = `$ ${totalPrice}`;
+
+  
 
       cartContainer.appendChild(name);
-      cartContainer.appendChild(price);
+      cartTotal.appendChild(price);
+      
 
     })
 }
+
+
 
 // remove from cart function 
 function removeFromCart() {
