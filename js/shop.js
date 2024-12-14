@@ -1,250 +1,156 @@
 // shop.js
 // generate product cards 
 
+// display product cards on page load
+document.addEventListener('DOMContentLoaded', createProductCardsFromJson);
 
-// Array to store all Products 
-let shopProducts = [
-    {
-        id: "1",
-        name: "Black Ops 6",
-        price: 59.99,
-        description: "add description here",
-        img: "/images/mw2.jpeg",
-        location: "/ps5/bo6ps5.html",
-        checkout: "/checkout.html"
-    }, 
-    {   
-        id: "2",
-        name: "The Last Of Us",
-        price: 69.99,
-        description: "add description here",
-        img: "/images/tlou.jpeg",
-        location: "/ps5/tlou.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "3",
-        name: "Days Gone",
-        price: 69.99,
-        description: "add description here",
-        img: "/images/days_gone.jpeg",
-        location: "/ps5/daysgone.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "4",
-        name: "Modern Warfare 2",
-        price: 69.99,
-        description: "add description here",
-        img: "/images/mw2.jpeg",
-        location: "/ps5/mw2.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "5",
-        name: "GTA 5",
-        price: 59.99,
-        description: "add description here",
-        img: "/images/gta5.jpeg",
-        location: "/ps4/gta5.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "6",
-        name: "Detroit Become Human",
-        price: 59.99,
-        description: "add description here",
-        img: "/images/detroit.jpeg",
-        location: "/ps4/dbh.html",
-        checkout: "/checkout.html"
-    }, 
-    {
-        id: "7",
-        name: "PS5 Pro",
-        price: 799.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/ps5pro.html",
-        checkout: "/checkout.html"
-    }, 
-    {
-        id: "8",
-        name: "PS5 TLOU Edition",
-        price: 699.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/ps5tlouedition.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "9",
-        name: "PS5 Slim",
-        price: 599.99,
-        description: "add description here",
-        img: "/images/ps5box.jpeg",
-        location: "/ps5/ps5slim.html",
-        checkout: "/checkout.html"
-    }, 
-    {
-        id: "13",
-        name: "PS5 Controller",
-        price: 99.99,
-        description: "add description here",
-        img: "/images/controller.jpeg",
-        location: "/ps5/ps5controller.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "14",
-        name: "PS5 Custom Controller",
-        price: 299.99,
-        description: "add description here",
-        img: "/images/customps5controller.jpeg",
-        location: "/ps5/ps5customcontroller.html",
-        checkout: "/checkout.html"
-    },
-    {
-        id: "15",
-        name: "PS5 Headphones",
-        price: 59.99,
-        description: "add description here",
-        img: "/images/headphones.jpeg",
-        location: "/ps5/ps5headphones.html",
-        checkout: "/checkout.html"
-    }
-]
 
+
+
+
+//====================== Shopping Cart ========================================
 // using localstorage to persist state to store shopping cart items 
-let shoppingCart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
+let shoppingCart;
 
+try {
+    
+    shoppingCart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
+} catch (error) {
 
-
-// Function to update HTML elements based on product data
-function createProductCards() {
-    const productCards = document.querySelectorAll('.card[data-id]');
-
-    productCards.forEach(card => {
-        const productId = card.getAttribute('data-id');
-        const productData = shopProducts.find(product => product.id === productId);
-
-       
-            // create card content
-            const imgElement = card.querySelector('.card-img-top');
-            const titleElement = card.querySelector('.card-title');
-            const textElement = card.querySelector('.card-text');
-            const priceElement = card.querySelector('.price');
-            const learnMoreBtn = card.querySelector('.learn-more-btn');
-            const buyNowBtn = card.querySelector('.buy-now-btn')
-
-            imgElement.src = productData.img;
-            imgElement.alt = productData.name;
-            titleElement.textContent = productData.name;
-            textElement.textContent = productData.description;
-            priceElement.textContent = `Price: €${productData.price}`;
-            learnMoreBtn.href = productData.location;
-            console.log(learnMoreBtn.href)
-            learnMoreBtn.textContent = `Learn More `
-            buyNowBtn.href = productData.checkout;
-            buyNowBtn.textContent = `Buy Now`
-        
-    });
+    console.error("Error parsing shopping cart data:", error);
+    shoppingCart = [];
 }
+console.log("Current shopping cart:", shoppingCart);
 
-// create product cards on page load 
-//document.addEventListener('DOMContentLoaded', createProductCards(shopProducts));
+//console.log(localStorage.getItem('shopping-cart'));
 
 // Update product cards on page load
-document.addEventListener('DOMContentLoaded', createProductCards);
-document.addEventListener('DOMContentLoaded', displayCartItems);
-
 document.getElementById('addtocart').addEventListener('click', addToCart )
+document.getElementById('addtocart').addEventListener('click', displayAddToCartModal)
 
-var addtocart = document.getElementById('addtocart');
-// add a listener for add to cart if such a button id is pressed
-addtocart.addEventListener("click", addToCart);
+console.log(displayCartItems)
 
+
+// remove items from shopping cart 
+// ! for testing purposes only 
+//localStorage.setItem('shopping-cart', JSON.stringify([]));
 
 
 
 // add to cart 
-function addToCart(productId) {
-    // find the product with the matching product id 
-    // ! The id is hardcoded for testing purposes only 
-    const product = shopProducts.find(product => product.id === "1");
-    console.log(product)
+function addToCart() {
 
-    var total=localStorage.getItem('checkout');
-    total++;
-    localStorage.setItem('checkout',total);
-    document.querySelector('#checkout').innerHTML=total;
+    // fetch json data 
+    const JsonData = fetchProducts();
 
 
-    shoppingCart.push(product);
-    
-    console.log(shoppingCart)
+    // query selector to get div element 
+    const productElement = document.querySelector('.product-name[product-id]');
+    // check if element exitst 
+    if (productElement) {
+        // get the product-id attribute (product-number)
+        const productID = productElement.getAttribute('product-id');
+        console.log(productID); // testing 
 
-    shoppingCart.forEach(item => {
-        console.log(item.name)
-        
-    })
+        // get total number of products in the cart 
+        var total = localStorage.getItem('checkout');
+        total++;
+        //total = 0; // for testing 
+        localStorage.setItem('checkout', total);
+        document.querySelector('#checkout').innerHTML = total;
+        var total = localStorage.getItem('checkout');
 
-    displayCartItems()
-
-    
-
-}
-
-// function display cart items 
-function displayCartItems() {
-    const cartContainer = document.getElementById('shopping-cart-items');
-    const cartTotal = document.getElementById('shopping-cart-total');
-   
-    localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
-
-    cartContainer.textContent = "";
-
-    console.log('shopping-cart')
-    console.log('test')
-    console.log(shoppingCart)
-
-    // variable to accumulate total price 
-    let totalPrice = 0; 
-
-    // loop through shopping cart array 
-    shoppingCart.forEach(item => {
-       
-        totalPrice += item.price; 
-        
-       const name = document.createElement('h2');
-       name.textContent = item.name;
-
-      const price = document.createElement('h2');
-
-      // TODO: fix this price in the total section 
-      price.textContent = `$ ${totalPrice}`;
-
-  
-
-      cartContainer.appendChild(name);
-      cartTotal.appendChild(price);
-      
-
-    })
+        fetch('/data/products.json')
+            .then(response => response.json())
+            .then(productsArray => {
+                // Iterate through the array and display product data
+                productsArray.forEach(product => {
+                    // filter products by product id 
+                    if (productID === product.id) {
+                        // if product id matches push products to cart 
+                        shoppingCart.push({
+                            'id': product.id,
+                            'name': product.name,
+                            'price': product.price
+                        });
+                        // persist state of the shopping cart using local storage 
+                        localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading products:', error));
+    } else {
+        console.error('Product element not found');
+    }
 }
 
 
-
-// remove from cart function 
-function removeFromCart() {
-
-}
-
-// empty shippting cart 
+// empty shopping cart 
 function emptyCart() {
     localStorage.setItem('shopping-cart', JSON.stringify([]));
 }
 
+//============= display Pop up after item added to cart =================
+
+// use bootstrap to display a pop up after an item is added to the cart
+// gives the user an option to go to the cart or to continue shopping 
+function displayAddToCartModal() {
+    const addToCartModal = new bootstrap.Modal(document.getElementById('addToCartModal'));
+
+    addToCartModal.show();
+}
+
+//================================================================================
+
+function createProductCardsFromJson() {
+    // fetch the json product data 
+    fetch('/data/products.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("JSON data could not be found");
+            }
+            return response.json();
+        })
+        .then(shopProducts => {
+            const productCards = document.querySelectorAll('.card[product-id]');
+
+            productCards.forEach(card => {
+                // ! This product-id stumped me for a while (I was trying to get element by id )
+                const productID = card.getAttribute('product-id');
+                console.log(productID)
+                const productData = shopProducts.find(product => product.id === productID);
+                if (productData) {
+                    const imgElement = card.querySelector('.card-img-top');
+                    const titleElement = card.querySelector('.card-title');
+                    const textElement = card.querySelector('.card-text');
+                    const priceElement = card.querySelector('.price');
+                    const learnMoreBtn = card.querySelector('.learn-more-btn');
+                    const buyNowBtn = card.querySelector('.buy-now-btn');
+
+                    imgElement.src = productData.img;
+                    imgElement.alt = productData.name;
+                    titleElement.textContent = productData.name;
+                    textElement.textContent = productData.description;
+                    priceElement.textContent = `Price: €${productData.price}`;
+                    learnMoreBtn.href = productData.location;
+                    learnMoreBtn.textContent = "Learn More";
+                    buyNowBtn.href = productData.checkout;
+                    buyNowBtn.textContent = "Buy Now";
+                }
+            })
+        })
+}
 
 
-
-
+async function fetchProducts() {
+    try {
+        const response = await fetch('/data/products.json');
+        if (!response.ok) {
+            throw new Error(`Error fetching Player products}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}

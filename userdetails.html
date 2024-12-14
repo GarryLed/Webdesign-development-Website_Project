@@ -22,7 +22,7 @@
             <!-- Content that goes inside hamburger menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
-               
+
 
                 <!-- Navigation items -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -52,90 +52,109 @@
                         </div>
                     </li>
                     <li class="nav-item m-1">
-                      <a class="nav-link" href="accessories.html">ACCESSORIES</a>
-                  </li>
+                        <a class="nav-link" href="accessories.html">ACCESSORIES</a>
+                    </li>
                     <li class="nav-item m-1">
                         <a class="nav-link" href="contact.html">CONTACT</a>
                     </li>
                     <li class="nav-item m-1">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
-                     <!-- Added JavaScript event listener to toggle user details-->
-                     <li class="nav-item m-1" >
+                    <!-- Added JavaScript event listener to toggle user details-->
+                    <li class="nav-item m-1">
                         <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
                     </li>
                     <li class="nav-item d-none m-1" id="userdetails">
-                      <a class="nav-link" href="/userdetails.html">USER DETAILS</a>
-                  </li>
-                  </ul> 
-              </div> <!-- End of hamburger content-->
+                        <a class="nav-link" href="/userdetails.html">USER DETAILS</a>
+                    </li>
+                </ul>
+            </div> <!-- End of hamburger content-->
 
-             <!-- cart icon -->
-             <div class="d-flex ms-auto align-items-center border rounded p-1 m-2">
-             
+            <!-- cart icon -->
+            <div class="d-flex ms-auto align-items-center border rounded p-1 m-2">
+
                 <a class="icon-link me-3" href="/cart.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                  </svg>
-                  <span class="visually-hidden">Cart</span>
-                  <div class="checkout" id="checkout"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg>
+                    <span class="visually-hidden">Cart</span>
+                    <div class="checkout" id="checkout"></div>
                 </a>
-              </div>
-  
-              <!-- Navbar hamburger toggler button -->
-              <!-- ! NOT WORKING AS EXPECTED! -->
-              <!-- TODO: fix the hamburger menu positioning-->
-            <div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             </div>
-          
-         
-       
+
+            <!-- Navbar hamburger toggler button -->
+            <!-- ! NOT WORKING AS EXPECTED! -->
+            <!-- TODO: fix the hamburger menu positioning-->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+
     </nav>
     <main>
 
-<!-- Main section -->
-        <h1>User Details</h1>
+        <!-- Main section -->
 
-        <!-- Not displaying as it should -->
-        <div>    
-          <form name="userdetails" id="udetails" action="" method="get">
-              <div class="form-group mb-3">
-                  <label for="firstNameID">First name</label>
-                  <input type="text" class="form-control" id="firstNameID" name="firstname" required>
-              </div>
-              <div class="form-group mb-3">
-                  <label for="lastNameID">Last name</label>
-                  <input type="text" class="form-control" id="lastNameID" name="lastname" required>
-              </div>    
-              <div class="form-group mb-3">
-                  <label for="dobID">Date of Birth</label>
-                  <input type="date" class="form-control" id="dobID" name="dob" required>
-              </div>
-              <div class="form-group mb-3">
-                  <label for="address1ID">Address 1</label>
-                  <input type="text" class="form-control" id="address1ID" name="address1" required>
-              </div>
-              <div class="form-group mb-3">
-                  <label for="address2ID">Address 2</label>
-                  <input type="text" class="form-control" id="address2ID" name="address2" required>
-              </div>
-              <div class="form-group mb-3">
-                  <label for="address3ID">Address 3</label>
-                  <input type="text" class="form-control" id="address3ID" name="address3" required>
-              </div>
-              <input type="submit" class="btn btn-primary" value="Update My Details">
-          </form>
-      </div>
-      
-    
-      </main>
-      <script src="js/custom.js"></script>     
-<script src="js/userdetails.js"></script> 
-<script src="js/login.js"></script>
+
+        <div class="container">
+            <div class="col-md-12 m-4 rounded card shadow-lg" style="background-color: lightblue;">
+                <form name="userdetails" id="udetails" action="" method="get">
+                    <fieldset class="mb-4 p-2">
+                        <legend class="mb-3">User Details</legend>
+
+                        <div class="row align-items-center mb-3">
+                            <label for="firstNameID" class="col-sm-2 col-form-label">First name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="firstNameID" name="firstname" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="lastNameID" class="col-sm-2 col-form-label">Last name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="lastNameID" name="lastname" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="dobID" class="col-sm-2 col-form-label">Date of Birth</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" id="dobID" name="dob" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="address1ID" class="col-sm-2 col-form-label">Address 1</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="address1ID" name="address1" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="address2ID" class="col-sm-2 col-form-label">Address 2</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="address2ID" name="address2" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="address3ID" class="col-sm-2 col-form-label">Address 3</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="address3ID" name="address3" required>
+                            </div>
+                        </div>
+                        <div class="m-3">
+                            <input type="submit" class="btn btn-primary" value="Update My Details">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="js/custom.js"></script>
+    <script src="js/userdetails.js"></script>
+    <script src="js/login.js"></script>
     <!-- Bootstrap footer -->
     <footer class="text-center position-relative bg-dark text-light">
         <!--Grid container -->

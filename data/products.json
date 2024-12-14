@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "name": "Black Ops 6",
+        "price": 59.99,
+        "description": "add description here",
+        "img": "/images/mw2.jpeg",
+        "location": "/ps5/bo6ps5.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "2",
+        "name": "The Last Of Us",
+        "price": 69.99,
+        "description": "add description here",
+        "img": "/images/tlou.jpeg",
+        "location": "/ps5/tlou.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "3",
+        "name": "Days Gone",
+        "price": 69.99,
+        "description": "add description here",
+        "img": "/images/days_gone.jpeg",
+        "location": "/ps5/daysgone.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "4",
+        "name": "Modern Warfare 2",
+        "price": 69.99,
+        "description": "add description here",
+        "img": "/images/mw2.jpeg",
+        "location": "/ps5/mw2.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "5",
+        "name": "GTA 5",
+        "price": 59.99,
+        "description": "add description here",
+        "img": "/images/gta5.jpeg",
+        "location": "/ps4/gta5.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "6",
+        "name": "Detroit Become Human",
+        "price": 59.99,
+        "description": "add description here",
+        "img": "/images/detroit.jpeg",
+        "location": "/ps4/dbh.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "7",
+        "name": "PS5 Pro",
+        "price": 799.99,
+        "description": "add description here",
+        "img": "/images/ps5box.jpeg",
+        "location": "/ps5/ps5pro.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "8",
+        "name": "PS5 TLOU Edition",
+        "price": 699.99,
+        "description": "add description here",
+        "img": "/images/ps5box.jpeg",
+        "location": "/ps5/ps5tlouedition.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "9",
+        "name": "PS5 Slim",
+        "price": 599.99,
+        "description": "add description here",
+        "img": "/images/ps5box.jpeg",
+        "location": "/ps5/ps5slim.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "13",
+        "name": "PS5 Controller",
+        "price": 99.99,
+        "description": "add description here",
+        "img": "/images/controller.jpeg",
+        "location": "/ps5/ps5controller.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "14",
+        "name": "PS5 Custom Controller",
+        "price": 299.99,
+        "description": "add description here",
+        "img": "/images/customps5controller.jpeg",
+        "location": "/ps5/ps5customcontroller.html",
+        "checkout": "/checkout.html"
+    },
+    {
+        "id": "15",
+        "name": "PS5 Headphones",
+        "price": 59.99,
+        "description": "add description here",
+        "img": "/images/headphones.jpeg",
+        "location": "/ps5/ps5headphones.html",
+        "checkout": "/checkout.html"
+    }
+]

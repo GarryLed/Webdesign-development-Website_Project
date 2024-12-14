@@ -98,83 +98,114 @@
 
 <!-- Main section -->
 <main>
+    
   <div class="container py-4">
     <h2 class="text-center mb-4">Checkout</h2>
+
+    
 <!--Checkout --> 
   <div class="container">
     <div class="row mt-5" >
-        <div class="col-md-4 mb-4 order-md-2" style="background: yellowgreen;">
-          <h4>
-            <span class="text-muted">Shopping Cart</span>
-            <span class="badge badge-secondary">Total Items</span>
-          </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between-align-items-center">
-              dynamically add products here
-            </li>   
-          </ul>
+         <!-- Order Summary -->
+         <div class="col-md-6 mb-4">
+            <h4>Order Summary</h4>
+            <div id="order-summary" class="border p-3 rounded">
+            </div>
+            <div class="mt-3">
+                <h5>Total Price: <span id="order-total">$0.00</span></h5>
+            </div>
         </div>
-        <div class="col-md-8 mb-4 order-md-1" style="background: skyblue;">
-            <h4 class="mb-3">Delivery Details</h4>
+
+        <div class="col-md-8 mb-4" style="background: skyblue;">
             <div> 
-              <form name="checkout" id="user-checkout" action="" method="get">
-                    <fieldset>
-                       
-                       
-                            <label for="getFirstName">First name</label>
-                            <input type="text"  id="getFirstName" name="firstname" value="firstname" required><br>
-                     
-                      
-                            <label for="getLastName">Last name</label>
-                            <input type="text" c id="getLastName" name="lastname" value="surname" required><br>
-                    
-                       
-                            <label for="getAddress1">Addresss</label>
-                            <input type="text"  id="getAddress1" name="address2" value="address 1" required><br>
-                  
-                      
-                            <label for="getAddress2">Addresss</label> 
-                            <input type="text" id="getAddress2" name="address2"  value="address 2"  required><br>
-                       
-                      
-                            <label for="getAddress3">Addresss</label> 
-                            <input type="text"  id="getAddress3" name="address3"  value="address 3"  required><br>
-                    
-                  
-                    <fieldset>
-                        <legend>Payment Details</legend>
-    
-                            <label for="getCardName">Card Name</label> 
-                            <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required><br>
-                 
-                            <label for="getCardNumber">Card Number</label> 
-                            <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required><br>
-                       
-                            <label for="getCardCVC">CVC</label> 
-                            <input type="password"  id="cardCvv" name="cardCvv"  required><br>
-                    </fieldset>    
-                    <div id="payment-success" role="alert">
+                <form name="checkout" id="user-checkout" action="" method="get" >
+                    <fieldset class="mb-4">
+                        <legend class="mb-3">Delivery Details</legend>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getFirstName" class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="getFirstName" name="firstname" value="firstname" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getLastName" class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="getLastName" name="lastname" value="surname" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getAddress1" class="col-sm-3 col-form-label">Address Line 1</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="getAddress1" name="address1" value="address 1" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getAddress2" class="col-sm-3 col-form-label">Address Line 2</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="getAddress2" name="address2" value="address 2" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getAddress3" class="col-sm-3 col-form-label">Address Line 3</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="getAddress3" name="address3" value="address 3" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                
+                    <fieldset class="mb-4">
+                        <legend class="mb-3">Payment Details</legend>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getCardName" class="col-sm-3 col-form-label">Card Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getCardNumber" class="col-sm-3 col-form-label">Card Number</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
+                            </div>
+                        </div>
+                
+                        <div class="row align-items-center mb-3">
+                            <label for="getCardCVC" class="col-sm-3 col-form-label">CVC</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="cardCvv" name="cardCvv" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                
+                    <div id="payment-success" class="alert alert-success d-none" role="alert">
                         Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="index.html">Home Page</a>.
                     </div>
-                    <div  id="payment-failure" role="alert">
-                      There seems to be a problem with the card details you entered.
-                    </div>                
-                    <div>
-                        <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
+                    <div id="payment-failure" class="alert alert-danger d-none" role="alert">
+                        There seems to be a problem with the card details you entered.
+                    </div>
+                
+                    <div class="mt-3 ">
+                        <input type="submit" class="btn btn-primary w-50 mb-3" id="buy-now" name="buy-now" value="Buy Now">
                     </div>
                 </form>
-    
+                
+                
     
             </div> 
         </div>   
         
         </div>   
     </div>
-</div> <!-- End of div containers -->  
+</div>  
 </main>
 <script src="/js/checkout.js"></script> 
 <script src="/js/custom.js"></script> 
-
 
     <!-- Bootstrap footer -->
     <footer>
