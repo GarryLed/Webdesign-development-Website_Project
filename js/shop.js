@@ -30,6 +30,8 @@ document.getElementById('addtocart').addEventListener('click', displayAddToCartM
 
 console.log(displayCartItems)
 
+// Attach event listener to the Buy Now button
+document.getElementById('buy-now-btn').addEventListener('click', handleBuyNow);
 
 // remove items from shopping cart 
 // ! for testing purposes only 
@@ -98,6 +100,58 @@ function displayAddToCartModal() {
     const addToCartModal = new bootstrap.Modal(document.getElementById('addToCartModal'));
 
     addToCartModal.show();
+}
+
+//===================== Buy Now Option ============================================
+
+function handleBuyNow(event) {
+    const buyNowButton = event.target;
+    const productId = buyNowButton.getAttribute('product-id');
+
+     // fetch json data 
+     const JsonData = fetchProducts();
+
+
+     // query selector to get div element 
+     const productElement = document.querySelector('.product-name[product-id]');
+     // check if element exitst 
+     if (productElement) {
+         // get the product-id attribute (product-number)
+         const productID = productElement.getAttribute('product-id');
+         console.log(productID); // testing 
+ 
+         // get total number of products in the cart 
+         var total = localStorage.getItem('checkout');
+         total++;
+         //total = 0; // for testing 
+         localStorage.setItem('checkout', total);
+         document.querySelector('#checkout').innerHTML = total;
+         var total = localStorage.getItem('checkout');
+ 
+         fetch('/data/products.json')
+             .then(response => response.json())
+             .then(productsArray => {
+                 // Iterate through the array and display product data
+                 productsArray.forEach(product => {
+                     // filter products by product id 
+                     if (productID === product.id) {
+                         // if product id matches push products to cart 
+                         shoppingCart.push({
+                             'id': product.id,
+                             'name': product.name,
+                             'price': product.price
+                         });
+                         // persist state of the shopping cart using local storage 
+                         localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+
+                         window.location.href = "/checkout.html";
+                     }
+                 });
+             })
+             .catch(error => console.error('Error loading products:', error));
+     } else {
+         console.error('Product element not found');
+     }
 }
 
 //================================================================================
