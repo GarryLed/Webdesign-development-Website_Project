@@ -62,14 +62,21 @@ checkout.addEventListener("click", () => {
         alert("Payment success");
         var element = document.getElementById("payment-failure");
         element.style.display = 'none';
-        //element.classList.add("d-none"); // bootstrap hide
+        element.classList.add("d-none"); // bootstrap hide
         var element = document.getElementById("payment-success");
         element.style.display = 'block';
-        //element.classList.remove("d-none"); // bootstrap hide
+        element.classList.remove("d-none"); // bootstrap hide
         // now set cart total to zero
         var total=0;
         // makes sure that when we goto another page the total is zero 
         localStorage.setItem('checkout',total); 
+
+        // empty cart after successful purchass 
+        localStorage.setItem('shopping-cart', JSON.stringify([]));
+        console.log("Cart emptied!");
+
+        
+
 
     } else {
         alert("Payment failure");
@@ -77,15 +84,12 @@ checkout.addEventListener("click", () => {
         element.style.display = 'block';
         var element = document.getElementById("payment-success");
         element.style.display = 'none';
-        //element.classList.add("d-none");
+        element.classList.add("d-none");
         var element = document.getElementById("payment-failure");
-        //element.classList.remove("d-none");
+        element.classList.remove("d-none");
  
     }
-    return false;  
-
-    
-    
+    return false;   
 })
 
 

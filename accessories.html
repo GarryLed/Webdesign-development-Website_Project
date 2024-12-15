@@ -204,9 +204,32 @@
       </section>
     
 </main>
+
+
+      <!-- bootstrop add to cart modal  -->
+    <!-- displays a pop up after each time a product is added to the cart-->
+    <!-- giving the user an option to continue shopping or go to the cart -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addToCartModalLabel">Item Added to Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>The item has been successfully added to your cart.</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+              <a href="/cart.html" class="btn btn-primary">Go to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 <script src="js/custom.js"></script>     
 <script src="js/shop.js"></script> 
-<script src="js/login.js"></script>
+
     <!-- Bootstrap footer -->
     <footer class="text-center position-relative bg-dark text-light">
         <!--Grid container -->

@@ -86,7 +86,7 @@
         "price": 99.99,
         "description": "add description here",
         "img": "/images/controller.jpeg",
-        "location": "/ps5/ps5controller.html",
+        "location": "/ps5/controller.html",
         "checkout": "/checkout.html"
     },
     {
@@ -95,7 +95,7 @@
         "price": 299.99,
         "description": "add description here",
         "img": "/images/customps5controller.jpeg",
-        "location": "/ps5/ps5customcontroller.html",
+        "location": "/ps5/customcontroller.html",
         "checkout": "/checkout.html"
     },
     {
@@ -104,7 +104,7 @@
         "price": 59.99,
         "description": "add description here",
         "img": "/images/headphones.jpeg",
-        "location": "/ps5/ps5headphones.html",
+        "location": "/ps5/headphones.html",
         "checkout": "/checkout.html"
     }
 ]
