@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', createProductCardsFromJson);
 
 
 
-
-
 //====================== Shopping Cart ========================================
 // using localstorage to persist state to store shopping cart items 
 let shoppingCart;
@@ -28,10 +26,15 @@ console.log("Current shopping cart:", shoppingCart);
 document.getElementById('addtocart').addEventListener('click', addToCart )
 document.getElementById('addtocart').addEventListener('click', displayAddToCartModal)
 
-console.log(displayCartItems)
 
-// Attach event listener to the Buy Now button
-document.getElementById('buy-now-btn').addEventListener('click', handleBuyNow);
+
+// attatching event listeners to all "Buy Now" buttons
+document.querySelectorAll('.buy-now-btn').forEach(btn => {
+    btn.addEventListener('click', handleBuyNow);
+    btn.addEventListener('click', handleBuyNowForCardProducts)
+});
+
+//document.getElementById('btn-1').addEventListener('click', testingBuyNowBtn);
 
 // remove items from shopping cart 
 // ! for testing purposes only 
@@ -102,22 +105,26 @@ function displayAddToCartModal() {
     addToCartModal.show();
 }
 
+
+
 //===================== Buy Now Option ============================================
 
+// TODO: refactor this code 
+// ! I made two functions to handle the buy now button in product cards and the buy butons
+// ! now in product cards 
+// using an event object to identify the particular buy now button on a page 
 function handleBuyNow(event) {
-    const buyNowButton = event.target;
-    const productId = buyNowButton.getAttribute('product-id');
-
-     // fetch json data 
-     const JsonData = fetchProducts();
-
-
+    const button = event.target;   
+     console.log('buy now button test ')
      // query selector to get div element 
-     const productElement = document.querySelector('.product-name[product-id]');
+     //const productElement = document.querySelector('.product-name[product-id]');
      // check if element exitst 
-     if (productElement) {
+    // if (productElement) {
          // get the product-id attribute (product-number)
-         const productID = productElement.getAttribute('product-id');
+         // works on products that are cards 
+         const productDetailsContainer = button.closest('.d-flex').parentElement;
+         const productNameElement = productDetailsContainer.querySelector('.product-name')  
+         const productID = productNameElement.getAttribute('product-id');
          console.log(productID); // testing 
  
          // get total number of products in the cart 
@@ -149,10 +156,60 @@ function handleBuyNow(event) {
                  });
              })
              .catch(error => console.error('Error loading products:', error));
-     } else {
-         console.error('Product element not found');
-     }
+     //} else {
+       //  console.error('Product element not found');
+     //}
 }
+
+// using an event object to identify the particular buy now button on a page 
+function handleBuyNowForCardProducts(event) {
+    const button = event.target;   
+     console.log('buy now button test ')
+     // query selector to get div element 
+     //const productElement = document.querySelector('.product-name[product-id]');
+     // check if element exitst 
+    // if (productElement) {
+         // get the product-id attribute (product-number)
+         // works on products that are cards 
+         const productCard = button.closest('.card');
+          
+         const productID = productCard.getAttribute('product-id');
+         console.log(productID); // testing 
+ 
+         // get total number of products in the cart 
+         var total = localStorage.getItem('checkout');
+         total++;
+         //total = 0; // for testing 
+         localStorage.setItem('checkout', total);
+         document.querySelector('#checkout').innerHTML = total;
+         var total = localStorage.getItem('checkout');
+ 
+         fetch('/data/products.json')
+             .then(response => response.json())
+             .then(productsArray => {
+                 // Iterate through the array and display product data
+                 productsArray.forEach(product => {
+                     // filter products by product id 
+                     if (productID === product.id) {
+                         // if product id matches push products to cart 
+                         shoppingCart.push({
+                             'id': product.id,
+                             'name': product.name,
+                             'price': product.price
+                         });
+                         // persist state of the shopping cart using local storage 
+                         localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+
+                         window.location.href = "/checkout.html";
+                     }
+                 });
+             })
+             .catch(error => console.error('Error loading products:', error));
+     //} else {
+       //  console.error('Product element not found');
+     //}
+}
+
 
 //================================================================================
 
