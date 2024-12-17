@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', displayOrderSummary);
 function displayOrderSummary() {
     const orderSummary = document.getElementById('order-summary');
     const orderTotal = document.getElementById('order-total');
-    
+
     orderSummary.innerHTML = '';
 
     let totalPrice = 0;
@@ -48,17 +48,17 @@ element.style.display = 'none';
 var element = document.getElementById("payment-success");
 element.style.display = 'none';
 
-var loggedin=localStorage.getItem('loggedIn'); 
-if (loggedin==0) {
-    window.location.href = "login.html";  // redirect to login page
+var loggedin = localStorage.getItem('loggedIn');
+if (loggedin == 0) {
+    window.location.href = "login.html"; // redirect to login page
 }
 // add a listener so that we run this code and preventdefault for submit...
 checkout.addEventListener("click", () => {
     event.preventDefault();
-    var cardnumber=document.getElementById('cardNumber').value;
-    var cardcvv=document.getElementById('cardCvv').value;
+    var cardnumber = document.getElementById('cardNumber').value;
+    var cardcvv = document.getElementById('cardCvv').value;
 
-    if (cardnumber=="1234 5678 9102 3456" && cardcvv=="123") {
+    if (cardnumber == "1234 5678 9102 3456" && cardcvv == "123") {
         alert("Payment success");
         var element = document.getElementById("payment-failure");
         element.style.display = 'none';
@@ -67,15 +67,15 @@ checkout.addEventListener("click", () => {
         element.style.display = 'block';
         element.classList.remove("d-none"); // bootstrap hide
         // now set cart total to zero
-        var total=0;
+        var total = 0;
         // makes sure that when we goto another page the total is zero 
-        localStorage.setItem('checkout',total); 
+        localStorage.setItem('checkout', total);
 
         // empty cart after successful purchass 
         localStorage.setItem('shopping-cart', JSON.stringify([]));
         console.log("Cart emptied!");
 
-        
+
 
 
     } else {
@@ -87,9 +87,7 @@ checkout.addEventListener("click", () => {
         element.classList.add("d-none");
         var element = document.getElementById("payment-failure");
         element.classList.remove("d-none");
- 
+
     }
-    return false;   
+    return false;
 })
-
-

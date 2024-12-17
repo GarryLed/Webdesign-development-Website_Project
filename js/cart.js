@@ -40,7 +40,7 @@ function displayCartItems() {
         cartContainer.appendChild(cartItem);
 
 
-       
+
         cartTotal.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
 
     })

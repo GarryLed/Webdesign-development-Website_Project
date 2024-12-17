@@ -22,173 +22,165 @@
             <!-- Content that goes inside hamburger menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
-               
+
 
                 <!-- Navigation items -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item m-1">
-                      <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                      <div class="dropdown m-1">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              PS5
-                          </button>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/ps5/games.html">PS5 Games</a></li>
-                              <li><a class="dropdown-item" href="/ps5/consoles.html">PS5 Consoles</a></li>
-                          </ul>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <div class="dropdown m-1">
-                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              PS4
-                          </button>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/ps4/games.html">PS4 Games</a></li>
-                              <li><a class="dropdown-item" href="/ps4/consoles.html">PS4 Consoles</a></li>
-                          </ul>
-                      </div>
-                  </li>
-                  <li class="nav-item m-1">
-                    <a class="nav-link" href="accessories.html">ACCESSORIES</a>
-                </li>
-                  <li class="nav-item m-1">
-                      <a class="nav-link" href="contact.html">CONTACT</a>
-                  </li>
-                  <li class="nav-item m-1">
-                      <a class="nav-link" href="about.html">ABOUT</a>
-                  </li>
-                   <!-- Added JavaScript event listener to toggle user details-->
-                   <li class="nav-item m-1" >
-                    <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
-                </li>
-                <li class="nav-item d-none m-1" id="userdetails">
-                  <a class="nav-link" href="/userdetails.html">USER DETAILS</a>
-              </li>
-              </ul> 
-          </div> <!-- End of hamburger content-->
+                    <li class="nav-item m-1">
+                        <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown m-1">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PS5
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/ps5/games.html">PS5 Games</a></li>
+                                <li><a class="dropdown-item" href="/ps5/consoles.html">PS5 Consoles</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown m-1">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PS4
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/ps4/games.html">PS4 Games</a></li>
 
-           <!-- cart icon -->
-           <div class="d-flex ms-auto align-items-center border rounded p-1 m-2">
-             
-            <a class="icon-link me-3" href="/cart.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-              </svg>
-              <span class="visually-hidden">Cart</span>
-              <div class="checkout" id="checkout"></div>
-            </a>
-          </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a class="nav-link" href="accessories.html">ACCESSORIES</a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item m-1">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <!-- Added JavaScript event listener to toggle user details-->
+                    <li class="nav-item m-1">
+                        <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item d-none m-1" id="userdetails">
+                        <a class="nav-link" href="/userdetails.html">USER DETAILS</a>
+                    </li>
+                </ul>
+            </div> <!-- End of hamburger content-->
 
-          <!-- Navbar hamburger toggler button -->
-          <!-- ! NOT WORKING AS EXPECTED! -->
-          <!-- TODO: fix the hamburger menu positioning-->
-            <div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- cart icon -->
+            <div class="d-flex ms-auto align-items-center border rounded p-1 m-2">
+
+                <a class="icon-link me-3" href="/cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg>
+                    <span class="visually-hidden">Cart</span>
+                    <div class="checkout" id="checkout"></div>
+                </a>
             </div>
-          
-         
-       
+
+            <!-- Navbar hamburger toggler button -->
+            <!-- ! NOT WORKING AS EXPECTED! -->
+            <!-- TODO: fix the hamburger menu positioning-->
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+
+
     </nav>
 
-<!-- Main -->
-<main>
+    <!-- Main -->
+    <main>
 
-    <!--Map and address-->
-    <div class="container py-5">
-        <h2 class="text-center mb-4">Contact Us</h2>
-        <div class="row">
-            <!-- Map Section -->
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h4>Find Us Here</h4>
-                <div class="ratio ratio-16x9">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509858!2d144.9537353153156!3d-37.81627974201181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1234567%3A0xabcdef1234567890!2sYour%20Business%20Name!5e0!3m2!1sen!2s!4v1678171650079!5m2!1sen!2s"
-                        width="600"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+        <!--Map and address of the business-->
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <!-- Map  -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4>Find Us Here</h4>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18639.36222478678!2d-8.619539796346881!3d54.269987844561314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ec36e0c6decd3%3A0xa00c7a997317930!2sKillaspugbrone%2C%20Strandhill%2C%20Co.%20Sligo!5e0!3m2!1sen!2sie!4v1734434440200!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Company Details Section -->
+                <div class="col-md-6 ">
+                    <h4>Contact Details</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Address:</strong> Strandhill, Co Sligo</li>
+                        <li class="mb-2"><strong>Email:</strong> <a href="mailto:hello@goodgames.ie">hello@goodgames.ie</a></li>
+                        <li class="mb-2"><strong>Phone:</strong>+353 87 123-4567</li>
+                        <li class="mb-2"><strong>Business Hours:</strong></li>
+                        <ul>
+                            <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                            <li>Saturday: 10:00 AM - 4:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </ul>
                 </div>
             </div>
-    
-            <!-- Company Details Section -->
-            <div class="col-md-6">
-                <h4>Contact Details</h4>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><strong>Address:</strong> 123 Gaming Street, Game City, GA 12345</li>
-                    <li class="mb-2"><strong>Email:</strong> <a href="mailto:support@goodgames.com">support@goodgames.com</a></li>
-                    <li class="mb-2"><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                    <li class="mb-2"><strong>Business Hours:</strong></li>
-                    <ul>
-                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
-                        <li>Saturday: 10:00 AM - 4:00 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
-                </ul>
+        </div>
+
+
+
+        <!-- Contact form -->
+        <div class="container">
+            <div class="col-md-12 mb-4 rounded card shadow-lg" style="background-color: lightblue;">
+                <form name="userdetails" id="udetails" action="" method="get">
+                    <fieldset class="mb-4 p-2">
+                        <legend class="mb-3">Reach Out To US</legend>
+
+                        <div class="row align-items-center mb-3">
+                            <label for="firstNameID" class="col-sm-2 col-form-label">First name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="firstNameID" name="firstname" placeholder="Enter your first name" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="lastNameID" class="col-sm-2 col-form-label">Last name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="lastNameID" name="lastname" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="contactEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="contactEmail" name="Email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="contactSubject" class="col-sm-2 col-form-label">Subject</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="contactSubject" name="Subject" placeholder="Enter a subject" required>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <label for="contactMessage" class="col-sm-2 col-form-label">Message</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="contactMessage" name="contactMessage" placeholder="Enter your message" rows="4" required></textarea>
+                            </div>
+
+                        </div>
+
+
+                        <div class="m-3">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
-    </div>
-    
-  
-    
-    <!-- contact form -->
-    <div class="container">
-        <div class="col-md-12 m-4 rounded card shadow-lg" style="background-color: lightblue;">
-            <form name="userdetails" id="udetails" action="" method="get">
-                <fieldset class="mb-4 p-2">
-                    <legend class="mb-3">Reach Out To US</legend>
 
-                    <div class="row align-items-center mb-3">
-                        <label for="firstNameID" class="col-sm-2 col-form-label">First name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="firstNameID" name="firstname" placeholder="Enter your first name" required>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-3">
-                        <label for="lastNameID" class="col-sm-2 col-form-label">Last name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="lastNameID" name="lastname" placeholder="Enter your last name" required>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-3">
-                        <label for="contactEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-9">
-                            <input type="email" class="form-control" id="contactEmail" name="Email" placeholder="Enter your email" required>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-3">
-                        <label for="contactSubject" class="col-sm-2 col-form-label">Subject</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="contactSubject" name="Subject" placeholder="Enter a subject" required>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-3">
-                        <label for="contactMessage" class="col-sm-2 col-form-label">Message</label>
-                        <div class="col-sm-9">
-                            <textarea class="form-control" id="contactMessage" name="contactMessage" placeholder="Enter your message" rows="4" required></textarea>
-                        </div>
-                        
-                    </div>
-                    
-                    
-                    <div class="m-3">
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-    
-</main>
-<script src="js/custom.js"></script>    
+    </main>
+    <script src="js/custom.js"></script>
     <!-- Bootstrap footer -->
     <footer class="text-center position-relative bg-dark text-light">
         <!--Grid container -->
@@ -202,7 +194,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 
 </html>

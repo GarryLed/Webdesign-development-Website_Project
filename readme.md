@@ -117,14 +117,11 @@ Write briefly under the following headings:
 
 #### Did you do anything in this project that was not covered in this module, maybe it was covered in another module? Maybe you applied something you learning from your own research?
 
-- Dark mode 
+- added a cart that displays the list of items in the shopping cart 
+- added a summary (list) of purchased items on the checkout page 
+- used a combination of JSON and javascript to dynimically create the products 
+- created drop down menus in the navigation  
 
 
-# Bugs
-- [x] Fixed
-Login/Logout is not wroking as exptected on every page (added custom JavaScript script to each page)
 
-- [x] Fixed
-Login/Logout not working on pages in dropdown menu (ps5/games...) This is a file path issue 
-added relative path and the login/logout is working as expected 
 
