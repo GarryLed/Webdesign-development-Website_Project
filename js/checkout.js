@@ -30,7 +30,7 @@ function displayOrderSummary() {
         cartItem.innerHTML = `
         <div>
             <h5>${item.name}</h5>
-            <p class="text-muted">$${item.price}</p>
+            <p class="text-muted">€${item.price}</p>
         </div>
         
         `;

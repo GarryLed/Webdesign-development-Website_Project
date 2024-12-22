@@ -34,14 +34,14 @@ function displayCartItems() {
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
             <h2>${item.name}</h2>
-            <p>Price: $${item.price}</p>
+            <p>Price: €${item.price}</p>
         `;
 
         cartContainer.appendChild(cartItem);
 
 
 
-        cartTotal.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+        cartTotal.textContent = `Total Price: €${totalPrice.toFixed(2)}`;
 
     })
 
