@@ -1,57 +1,3 @@
-# Gamers Delight Website 
-## Table of Contents 
-- Project overview 
-- Features 
-- Technology Stack 
-- Website File structure 
-- Setup and installation 
-- Usuage 
-- Credits 
-
-####
-# Video games and consoles for sale website  
-## Name: Gamers Delight 
-
-
-## Homepage 
-
-
-# Product Categories 
-## PS5
-- Games
-- Consoles 
-- VR2
-- Accessories 
-
-## PS4 
-- Games
-- Consoles 
-- Accessories 
- 
-
-## XBOX
-- Games 
-- Consoles 
-- Accessories 
-
-## Accessories 
-
-
-# User account and checkout 
-- User registeration 
-- cart and checkout 
-- payment 
-
-
-# Extra features 
-- product reviews 
-- gaming blog 
-
-# Contact us and about us pages 
-- contact form 
-- map 
-- mission statement 
-
 # Project Report for Web Design & Development
 ## Contents
 1. Introduction	1
@@ -65,17 +11,11 @@
 7. Accessibility	2
 8. Wireframes	2
 9. Reflection on your work	2
+
 # 1. Introduction
 [Briefly describe what you have designed the site for and what it does]
 
-### Tech Stack
-- HTML5 
-- CSS 
-- Bootstrap 
-- JavaScript
-
-### features 
-- dark mode 
+The website is an e-commerce site that sells video games, consoles, and gaming accessories. 
 
 # 2. Link to Github Pages
 [add link to your project running on Github pages]
@@ -86,10 +26,10 @@
 # 4. Design Decisions Made
 [For each of the following state briefly what you did and why you did it]
 
+1. Dynamically created product cards with javascript to be displayed on the website 
+
 ## 4.1 Look and Feel
 [Describe what how you have applied Bootstrap to your site or any customisations you have made toward the end of the project]
-
-- Dark mode 
 
 
 ## 4.2 Breakpoints
@@ -98,11 +38,30 @@
 # 5. Performance
 [Explain what you have done to improve the performance of your site, and any changes you could make for a production site.]
 
+I imporved performance of the site in a few ways: 
+1. Loading CSS at the top of each page, but loading JavaScript at the bottom of each page, which will help the pages load faster.
+2. Minifiying CSS/JS files 
+3. Optimizing images by resizing them and makeing them smaller 
+ 
+
+
 # 6. SEO
 [Explain what you have done to improve the SEO of your site. Illustrate with screenshot examples from your code]
+1. Image optimisation 
+2. Meta tags 
+3. Title optimisation for each page
+4. Meta Description 
+5. Keywords on each page 
+6. Page speed 
+7. Image alt text 
+
 
 # 7. Accessibility
 [Explain what you have done to make your site accessible. Illustrate with screenshot examples from your code]
+1. Image alt text 
+2. Labels on all the forms 
+3. Descriptive URL's 
+
 
 # 8. Wireframes
 [If the paper wireframes that you presented in early November are different to the finished website – explain briefly why this is so? What could you have done differently?]

@@ -1,0 +1,22 @@
+{
+  "name": "website_project",
+  "version": "1.0.0",
+  "description": "1. Introduction\t1\r 2. Link to Github Pages\t1\r 3. Installation/Usage\t1\r 4. Design Decisions Made\t1\r       - Look and Feel\t1\r     - Breakpoints\t1\r 5. Performance\t2\r 6. SEO\t2\r 7. Accessibility\t2\r 8. Wireframes\t2\r 9. Reflection on your work\t2\r # 1. Introduction\r [Briefly describe what you have designed the site for and what it does]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarryLed/Webdesign-development-Website_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GarryLed/Webdesign-development-Website_Project/issues"
+  },
+  "homepage": "https://github.com/GarryLed/Webdesign-development-Website_Project#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
