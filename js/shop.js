@@ -35,11 +35,12 @@ document.getElementById('addtocart').addEventListener('click', displayAddToCartM
 function addToCart() {
 
     // query selector to get div element 
-    const productElement = document.querySelector('.product-name[product-id]');
+    // TODO: change this to id 
+    const productElement = document.querySelector('.product-name[id]');
     // check if element exitst 
     if (productElement) {
         // get the product-id attribute (product-number)
-        const productID = productElement.getAttribute('product-id');
+        const productID = productElement.getAttribute('id');
         console.log(productID); // testing 
 
         // get total number of products in the cart 
@@ -102,7 +103,7 @@ function handleBuyNow(event) {
     // works on products that are cards 
     const productDetailsContainer = button.closest('.product').parentElement;
     const productNameElement = productDetailsContainer.querySelector('.product-name')
-    const productID = productNameElement.getAttribute('product-id');
+    const productID = productNameElement.getAttribute('id');
 
     // get total number of products in the cart 
     var total = localStorage.getItem('checkout');
@@ -144,7 +145,7 @@ function handleBuyNowForCardProducts(event) {
     // works on products that are cards 
     const productCard = button.closest('.card');
 
-    const productID = productCard.getAttribute('product-id');
+    const productID = productCard.getAttribute('id');
     console.log(productID); // testing 
 
     // get total number of products in the cart 
@@ -192,11 +193,11 @@ function createProductCardsFromJson() {
             return response.json();
         })
         .then(shopProducts => {
-            const productCards = document.querySelectorAll('.card[product-id]');
+            const productCards = document.querySelectorAll('.card[id]');
 
             productCards.forEach(card => {
                 // ! This product-id stumped me for a while (I was trying to get element by id )
-                const productID = card.getAttribute('product-id');
+                const productID = card.getAttribute('id');
                 console.log(productID)
                 const productData = shopProducts.find(product => product.id === productID);
                 if (productData) {
