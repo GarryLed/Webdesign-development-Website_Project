@@ -15,11 +15,12 @@
 # 1. Introduction
 [Briefly describe what you have designed the site for and what it does]
 
-The website is an e-commerce site that sells video games, consoles, and gaming accessories. 
+
+The website I designed is an e-commerce site that sells video games, consoles, and gaming accessories. It allows users to login/logout with pre defined user details. Once a user is logged in they can
 
 # 2. Link to Github Pages
 [add link to your project running on Github pages]
-
+[GitHub Repo for Project](https://github.com/GarryLed/Webdesign-development-Website_Project)
 # 3. Installation/Usage
 [Add in here any specific details that will allow the lecturer to test your work – e.g. Username/password combo to “allow” login of the prototype. Also add in any missing elements, functionality not working, etc]
 

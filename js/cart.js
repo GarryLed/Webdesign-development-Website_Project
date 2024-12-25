@@ -3,16 +3,11 @@
 document.addEventListener('DOMContentLoaded', displayCartItems);
 
 
+// function to diplay cart items 
 function displayCartItems() {
+    // get the cart containter 
     const cartContainer = document.getElementById('shopping-cart-items');
     const cartTotal = document.getElementById('shopping-cart-total');
-
-    
-
-
-    console.log(shoppingCart)
-
-    console.log('inside cart itmes')
 
     cartContainer.innerText = '';
     cartTotal.innerText = '';

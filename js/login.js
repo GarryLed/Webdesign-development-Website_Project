@@ -16,7 +16,7 @@ function loginUser() {
         // successful login, user redirected to shop.html
         localStorage.setItem('loggedIn',1); 
       
-        window.location.href = "/index.html";  // redirect to shop page
+        window.location.href = "/index.html";  // redirect to home page
     }
     else {
         alert("invalid login details");

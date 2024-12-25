@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', createProductCardsFromJson);
 // attatching event listeners to all "Buy Now" buttons
 document.querySelectorAll('.buy-now-btn').forEach(btn => {
     console.log(btn)
+    // some buy-now buttons are in product cards and some are on a specified product page, so I have two functions to address each 
     btn.addEventListener('click', handleBuyNow);
     btn.addEventListener('click', handleBuyNowForCardProducts)
 });
@@ -27,7 +28,7 @@ console.log("Current shopping cart:", shoppingCart);
 
 
 
-// add event listeners for adding products to cart 
+// event listeners for adding products to cart 
 document.getElementById('addtocart').addEventListener('click', addToCart)
 document.getElementById('addtocart').addEventListener('click', displayAddToCartModal)
 
@@ -35,18 +36,18 @@ document.getElementById('addtocart').addEventListener('click', displayAddToCartM
 function addToCart() {
 
     // query selector to get div element 
-    // TODO: change this to id 
+ 
     const productElement = document.querySelector('.product-name[id]');
     // check if element exitst 
     if (productElement) {
         // get the product-id attribute (product-number)
         const productID = productElement.getAttribute('id');
-        console.log(productID); // testing 
 
+        // using local storage to persist state 
         // get total number of products in the cart 
         var total = localStorage.getItem('checkout');
         total++;
-        //total = 0; // for testing 
+      
         localStorage.setItem('checkout', total);
         document.querySelector('#checkout').innerHTML = total;
         var total = localStorage.getItem('checkout');
@@ -54,7 +55,7 @@ function addToCart() {
         fetch('/data/products.json')
             .then(response => response.json())
             .then(productsArray => {
-                // Iterate through the array and display product data
+                // iterate through the array and display product data
                 productsArray.forEach(product => {
                     // filter products by product id 
                     if (productID === product.id) {
@@ -64,6 +65,7 @@ function addToCart() {
                             'name': product.name,
                             'price': product.price
                         });
+
                         // persist state of the shopping cart using local storage 
                         localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
                     }
@@ -83,7 +85,7 @@ function emptyCart() {
 
 //============= display Pop up after item added to cart =================
 
-// use bootstrap to display a pop up after an item is added to the cart
+// using bootstrap to display a pop up after an item is added to the cart
 // gives the user an option to go to the cart or to continue shopping 
 function displayAddToCartModal() {
     const addToCartModal = new bootstrap.Modal(document.getElementById('addToCartModal'));
@@ -93,14 +95,11 @@ function displayAddToCartModal() {
 
 //===================== Buy Now Option ============================================
 
-// TODO: refactor this code 
-// ! I made two functions to handle the buy now button in product cards and the buy butons
-// ! now in product cards 
 // using an event object to identify the particular buy now button on a page 
 function handleBuyNow(event) {
     const button = event.target;
 
-    // works on products that are cards 
+    // div container 
     const productDetailsContainer = button.closest('.product').parentElement;
     const productNameElement = productDetailsContainer.querySelector('.product-name')
     const productID = productNameElement.getAttribute('id');
@@ -108,11 +107,12 @@ function handleBuyNow(event) {
     // get total number of products in the cart 
     var total = localStorage.getItem('checkout');
     total++;
-    //total = 0; // for testing 
+   
     localStorage.setItem('checkout', total);
     document.querySelector('#checkout').innerHTML = total;
     var total = localStorage.getItem('checkout');
 
+    // using fetch to fetch the json products data 
     fetch('/data/products.json')
         .then(response => response.json())
         .then(productsArray => {
@@ -129,6 +129,7 @@ function handleBuyNow(event) {
                     // persist state of the shopping cart using local storage 
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
+                    // redirects user to checkout page 
                     window.location.href = "/checkout.html";
                 }
             });
@@ -182,7 +183,8 @@ function handleBuyNowForCardProducts(event) {
 
 //================================================================================
 
-// dynamicially creting product cards 
+// dynamicially creting product cards for the entire website 
+// function to create product cards 
 function createProductCardsFromJson() {
     // fetch the json product data 
     fetch('/data/products.json')
