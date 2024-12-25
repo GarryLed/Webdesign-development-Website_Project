@@ -3,8 +3,9 @@
         "id": "1",
         "name": "Black Ops 6",
         "price": 59.99,
-        "description": "add description here",
+        "description": "Call of Duty's newest edition, Black Ops 6 is here, and as usual, jam packed with action and an all star cast of new characters",
         "img": "/images/mw2.jpeg",
+        "alt": "Call of Duty Black ops 6",
         "location": "/ps5/bo6ps5.html",
         "checkout": "/checkout.html"
     },
@@ -12,7 +13,7 @@
         "id": "2",
         "name": "The Last Of Us",
         "price": 69.99,
-        "description": "add description here",
+        "description": "After a global pandamic that destroys civilisation as we know it, one man and a 14 year girl may be humanities last hope of survival",
         "img": "/images/tlou.jpeg",
         "location": "/ps5/tlou.html",
         "checkout": "/checkout.html"
@@ -21,7 +22,7 @@
         "id": "3",
         "name": "Days Gone",
         "price": 69.99,
-        "description": "add description here",
+        "description": "Days Gone is a post-apocalyptic open world action adventure love story, where you play as an outlaw biker on a mission to find his lost lover in a zombie infested world",
         "img": "/images/days_gone.jpeg",
         "location": "/ps5/daysgone.html",
         "checkout": "/checkout.html"
@@ -30,7 +31,7 @@
         "id": "4",
         "name": "Modern Warfare 2",
         "price": 69.99,
-        "description": "add description here",
+        "description": "Call of Duty's newest edition, Modern Warfare 2 is here, and as usual, jam packed with action and an your favorite characters back ",
         "img": "/images/mw2.jpeg",
         "location": "/ps5/mw2.html",
         "checkout": "/checkout.html"
@@ -39,7 +40,7 @@
         "id": "5",
         "name": "GTA 5",
         "price": 59.99,
-        "description": "add description here",
+        "description": "GTA 5 is an action-adventure masterpiece where you will be plunged into the chaotic city of San Andreas where you will be the one creating the chaos ",
         "img": "/images/gta5.jpeg",
         "location": "/ps4/gta5.html",
         "checkout": "/checkout.html"
@@ -48,7 +49,7 @@
         "id": "6",
         "name": "Detroit Become Human",
         "price": 59.99,
-        "description": "add description here",
+        "description": "Detroit Become Human is one of the move submersive si-fi games ever made. Step inside the mind of an android where every choice has consequenses",
         "img": "/images/detroit.jpeg",
         "location": "/ps4/dbh.html",
         "checkout": "/checkout.html"
@@ -57,7 +58,7 @@
         "id": "7",
         "name": "PS5 Pro",
         "price": 799.99,
-        "description": "add description here",
+        "description": "Playstation 5 Pro is here and and fully loaded with upgraded cpu, graphics card, providing serious gamers with a richer gaming experience",
         "img": "/images/ps5box.jpeg",
         "location": "/ps5/ps5pro.html",
         "checkout": "/checkout.html"
@@ -66,7 +67,7 @@
         "id": "8",
         "name": "PS5 TLOU Edition",
         "price": 699.99,
-        "description": "add description here",
+        "description": "The Last Of Us Playstation 5 Edition is here. Get this limited edition PS5 jam packed with the last of us easter eggs for the die hard Last of Us gamers out there who want a little piece of gaming history",
         "img": "/images/ps5box.jpeg",
         "location": "/ps5/ps5tlouedition.html",
         "checkout": "/checkout.html"
@@ -75,7 +76,7 @@
         "id": "9",
         "name": "PS5 Slim",
         "price": 599.99,
-        "description": "add description here",
+        "description": "The Playstation 5 Slim, is only slim on the outsid, but it comes packed with an upgraded cpu and 2TB of storage and 120FPS",
         "img": "/images/ps5box.jpeg",
         "location": "/ps5/ps5slim.html",
         "checkout": "/checkout.html"
@@ -84,7 +85,7 @@
         "id": "13",
         "name": "PS5 Controller",
         "price": 99.99,
-        "description": "add description here",
+        "description": "The official Playstation 5 controller feels like no other. it fits you hand like a glove and will enhance your gaming experience",
         "img": "/images/controller.jpeg",
         "location": "/ps5/controller.html",
         "checkout": "/checkout.html"
@@ -93,7 +94,7 @@
         "id": "14",
         "name": "PS5 Custom Controller",
         "price": 299.99,
-        "description": "add description here",
+        "description": "Do you know why the Call Of Duty Pro's are so good? One reason is they know that having a fully custom contorller with paddles make the TTK (time to kill) much much faster",
         "img": "/images/customps5controller.jpeg",
         "location": "/ps5/customcontroller.html",
         "checkout": "/checkout.html"
@@ -102,7 +103,7 @@
         "id": "15",
         "name": "PS5 Headphones",
         "price": 59.99,
-        "description": "add description here",
+        "description": "Witness the Playstation 5's newest edition: a fine set of headphones to make your gaming experience all that much more immersive",
         "img": "/images/headphones.jpeg",
         "location": "/ps5/headphones.html",
         "checkout": "/checkout.html"

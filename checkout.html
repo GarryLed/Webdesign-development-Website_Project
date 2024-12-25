@@ -19,7 +19,7 @@
             <!-- Navbar brand -->
             <a class="navbar-brand" href="index.html">Good Games</a>
 
-            <!-- Content that goes inside hamburger menu -->
+            <!-- Hamburger menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
 
@@ -60,7 +60,7 @@
                     <li class="nav-item m-1">
                         <a class="nav-link" href="/about.html">ABOUT</a>
                     </li>
-                    <!-- Added JavaScript event listener to toggle user details-->
+                  
                     <li class="nav-item m-1">
                         <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
                     </li>
@@ -84,8 +84,7 @@
             </div>
 
             <!-- Navbar hamburger toggler button -->
-            <!-- ! NOT WORKING AS EXPECTED! -->
-            <!-- TODO: fix the hamburger menu positioning-->
+         
             <div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -101,9 +100,6 @@
 
         <div class="container py-4">
             <h2 class="text-center mb-4">Checkout</h2>
-
-
-            <!--Checkout -->
             <div class="container">
                 <div class="row mt-5">
                     <!-- Order Summary -->
@@ -112,10 +108,11 @@
                         <div id="order-summary" class="border p-3 rounded">
                         </div>
                         <div class="mt-3">
-                            <h5>Total Price: <span id="order-total">$0.00</span></h5>
+                            <h5>Total Price: <span id="order-total"></span></h5>
                         </div>
                     </div>
 
+                    <!-- Delivery and Payment details -->
                     <div class="col-md-8 mb-4" style="background: skyblue;">
                         <div>
                             <form name="checkout" id="user-checkout" action="" method="get">

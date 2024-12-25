@@ -7,7 +7,7 @@ function displayCartItems() {
     const cartContainer = document.getElementById('shopping-cart-items');
     const cartTotal = document.getElementById('shopping-cart-total');
 
-    //localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+    
 
 
     console.log(shoppingCart)

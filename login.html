@@ -19,7 +19,7 @@
             <!-- Navbar brand -->
             <a class="navbar-brand" href="index.html">Good Games</a>
 
-            <!-- Content that goes inside hamburger menu -->
+            <!-- Hamburger menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
 
@@ -60,7 +60,7 @@
                     <li class="nav-item m-1">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
-                    <!-- Added JavaScript event listener to toggle user details-->
+                   
                     <li class="nav-item m-1">
                         <a class="nav-link" id="loginlogout" href="/login.html">LOGIN</a>
                     </li>
@@ -84,8 +84,7 @@
             </div>
 
             <!-- Navbar hamburger toggler button -->
-            <!-- ! NOT WORKING AS EXPECTED! -->
-            <!-- TODO: fix the hamburger menu positioning-->
+        
             <div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -96,12 +95,10 @@
 
     </nav>
     <main>
-        <div class="d-flex align-items-center justify-content-center">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <h1 class="text-center mb-4">Login</h1>
-                        <div class="alert alert-danger d-none" role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>
                         <div class="card shadow-lg" style="background-color: lightblue;">
                             <div class="card-body">
                                 <!-- Login form -->
@@ -123,11 +120,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Logout Button  -->
-            <button id="loginlogout" class="btn btn-link d-none">Login</button>
-
-        </div>
+            </div>   
     </main>
     <script src="/js/custom.js"></script>
     <script src="/js/login.js"></script>

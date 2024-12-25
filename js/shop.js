@@ -195,8 +195,9 @@ function createProductCardsFromJson() {
         .then(shopProducts => {
             const productCards = document.querySelectorAll('.card[id]');
 
+            // loop through 
             productCards.forEach(card => {
-                // ! This product-id stumped me for a while (I was trying to get element by id )
+                
                 const productID = card.getAttribute('id');
                 console.log(productID)
                 const productData = shopProducts.find(product => product.id === productID);
