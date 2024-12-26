@@ -76,7 +76,7 @@
         "id": "9",
         "name": "PS5 Slim",
         "price": 599.99,
-        "description": "The Playstation 5 Slim, is only slim on the outsid, but it comes packed with an upgraded cpu and 2TB of storage and 120FPS",
+        "description": "The Playstation 5 Slim, is only slim on the outside, but it comes packed with an upgraded cpu and 2TB of storage and 120FPS",
         "img": "/images/ps5box.jpeg",
         "location": "/ps5/ps5slim.html",
         "checkout": "/checkout.html"

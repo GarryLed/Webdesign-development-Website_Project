@@ -12,8 +12,6 @@ function displayCartItems() {
     cartContainer.innerText = '';
     cartTotal.innerText = '';
 
-    console.log('Displaying cart items:', shoppingCart);
-
     // variable to accumulate total price 
     let totalPrice = 0;
 
@@ -33,7 +31,6 @@ function displayCartItems() {
         `;
 
         cartContainer.appendChild(cartItem);
-
 
 
         cartTotal.textContent = `Total Price: €${totalPrice.toFixed(2)}`;
