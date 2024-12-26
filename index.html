@@ -20,7 +20,6 @@
   <!-- Navbar brand -->
   <a class="navbar-brand" href="/index.html">Good Games</a> 
 
-
             <!-- Hamburger menu-->
             <div class="collapse navbar-collapse" id="mainNavbar">
 
@@ -30,6 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
+                      <!-- Here is a dropdown menu inside the nav item (I wanted to have multiple sub categorries ) -->
                         <div class="dropdown m-1">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 PS5
@@ -47,7 +47,6 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="ps4/games.html">PS4 Games</a></li>
-                      
                             </ul>
                         </div>
                     </li>
@@ -90,22 +89,22 @@
               </button>
             </div>
         </div>
-          </nav>
+      </nav>
              
-<!-- Main -->
 <main>
-  <!--Hero section with carousel -->
+
+  <!-- Bootstrap Hero section with carousel   -->
 
   <div class="container-fluid">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-      <!-- Indicators -->
+      <!-- Indicators for the carousel  -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
   
-      <!-- Slides -->
+      <!-- Slides in the carousel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="images/ps5_controller.jpg" class="d-block w-100" alt="...">
@@ -143,7 +142,9 @@
 
   <!-- End of carousel -->
 
-  <!--New Games releases  section -->
+  <!-- Bootstrap and JavaScript used to build out product sections
+    New Games releases section 
+  -->
   <section class=" pt-3 text-center">
   <h1>New Releases</h1>
 
@@ -151,8 +152,9 @@
       <div class="row justify-content-center">
         <!-- Product 1 -->
     
-        <div class="card m-3 p-3 shadow-lg" style="width: 18rem;"  id="1">
-            <img src="..." class="card-img-top" alt="...">
+        <!-- Below are bootstraap card templates used with JavaScript to create dynamic product cards using an id tag for each product-->
+        <div class="card m-3 p-3 shadow-lg" style="width: 18rem;" id="1">
+            <img src="..." class="card-img-top" alt="..."> <!-- img src and alt tags are created dynimacially using JS and JSON-->
             <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text"></p>
@@ -198,7 +200,6 @@
   <section class=" pt-3 text-center">
     <h2>Best Sellers</h2>
   
-
     <div class="container ">
       <div class="row justify-content-center">
         <!-- Product 1 -->
@@ -245,7 +246,7 @@
 </div>
   </section>
 
-<!--Newsletter Section -->
+<!-- Bootstrap Newsletter Section -->
 
 <section class="text-center pt-3">
 <div class="container">
@@ -263,9 +264,12 @@
 </section>
 
 </main>
+
+<!--JavaScript scripts -->
 <script src="/js/custom.js"></script>     
 <script src="/js/shop.js"></script> 
 <script src="/js/login.js"></script>
+
     <!-- Bootstrap footer -->
     <footer class="text-center position-relative bg-dark text-light">
         <!--Grid container -->

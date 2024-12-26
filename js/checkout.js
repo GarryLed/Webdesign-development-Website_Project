@@ -38,7 +38,7 @@ function displayOrderSummary() {
     });
 
     // update price 
-    orderTotal.textContent = `$${totalPrice.toFixed(2)}`;
+    orderTotal.textContent = `€${totalPrice.toFixed(2)}`;
 }
 
 

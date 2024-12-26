@@ -16,25 +16,63 @@
 [Briefly describe what you have designed the site for and what it does]
 
 
-The website I designed is an e-commerce site that sells video games, consoles, and gaming accessories. It allows users to login/logout with pre defined user details. Once a user is logged in they can
+The website I designed for this project is an e-commerce site that sells video games, consoles, and gaming accessories. I called the site "Good Games", which is a nod to the gaming community where us gamers typically say "GG" or Good Game" after playing our favorite games online. The products on the website range form the latest video game releases, best sellers to the all time classic titles. Good Games also sells consoles, and gaming accessories. 
+
+The site has a modern design, is mobile responsive with a user first interface, and has a fully functional shopping cart system. Some of the key features of the site include dynamic product creation where all products are created using javaScript, an interactive shopping cart that displays a pop up that asks the user if they want to go to the cart or continue shopping when an item is added to their cart.  
 
 # 2. Link to Github Pages
-[add link to your project running on Github pages]
+
 [GitHub Repo for Project](https://github.com/GarryLed/Webdesign-development-Website_Project)
+
 # 3. Installation/Usage
 [Add in here any specific details that will allow the lecturer to test your work – e.g. Username/password combo to “allow” login of the prototype. Also add in any missing elements, functionality not working, etc]
 
-# 4. Design Decisions Made
-[For each of the following state briefly what you did and why you did it]
+*scss*
+I had an issue with css and scss. When I initially tried to update the css using scss, I couldnt get it to work, and when I eventually did, I also had an issue when updating a scss file, where the css did not update (I was using the VS code plugin). To solve this problem, I had to install node and run a command from the command line: 
+1. Install node
+2. from the command line (in the project folder) run the followng command: npx sass scss/styles.scss css/styles.css
 
-1. Dynamically created product cards with javascript to be displayed on the website 
+
+# 4. Design Decisions Made
 
 ## 4.1 Look and Feel
-[Describe what how you have applied Bootstrap to your site or any customisations you have made toward the end of the project]
+### Bootstrap 
+**NavBar**
+- The navbar on each page was used to create a responsive 
+
+**Carousel**
+
+**Cards** (Product cards)
+
+**Forms**
+
+
+**Layout and Grid System**
+
+**Buttons**
+
+**Overriding Bootstrap with scss**
+
+**SCSS customisations**
 
 
 ## 4.2 Breakpoints
 [List the major breakpoints in your work  and describe what  changes at the breakpoint. Did you implement any minor tweaks at these breakpoints using media query techniques? e.g. font size changes, hiding of content, responsive images using srcset, etc?]
+
+### Extra Small Devices (XS)
+
+
+### Small Devices (SM)
+
+
+### Medium Devices (MD)
+
+### Large Devices (LG)
+
+### Extra Large Devices (XL)
+
+
+### Media Queries 
 
 # 5. Performance
 [Explain what you have done to improve the performance of your site, and any changes you could make for a production site.]
@@ -62,11 +100,19 @@ I imporved performance of the site in a few ways:
 1. Image alt text 
 2. Labels on all the forms 
 3. Descriptive URL's 
+4. Readable text 
+
+Add wire framces here 
 
 
 # 8. Wireframes
 [If the paper wireframes that you presented in early November are different to the finished website – explain briefly why this is so? What could you have done differently?]
 - add wireframes here
+
+**Differences**
+1. Search bar 
+2. Dark mode 
+
 
 # 9. Reflection on your work
 
@@ -77,10 +123,12 @@ Write briefly under the following headings:
 
 #### Did you do anything in this project that was not covered in this module, maybe it was covered in another module? Maybe you applied something you learning from your own research?
 
-- added a cart that displays the list of items in the shopping cart 
-- added a summary (list) of purchased items on the checkout page 
+- added a cart page before the checkout page that displays the list of items in the shopping cart, the totaal for all items and has a link to
+the checkout page 
+- On the checkout page I added an order summary (list) of purchased items at the top of the page with the total price underneath 
 - used a combination of JSON and javascript to dynimically create the products 
 - created drop down menus in the navigation  
+- added a pop up after an item is added to the cart that gives the user an option to either continue shopping or go to the cart 
 
 
 
