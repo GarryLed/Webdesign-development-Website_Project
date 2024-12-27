@@ -4,7 +4,7 @@
         "name": "Black Ops 6",
         "price": 59.99,
         "description": "Call of Duty's newest edition, Black Ops 6 is here, and as usual, jam packed with action and an all star cast of new characters",
-        "img": "./images/mw2.jpeg",
+        "img": "/images/mw2.jpeg",
         "alt": "Call of Duty Black ops 6",
         "location": "/ps5/bo6ps5.html",
         "checkout": "/checkout.html"
@@ -23,7 +23,7 @@
         "name": "Days Gone",
         "price": 69.99,
         "description": "Days Gone is a post-apocalyptic open world action adventure love story, where you play as an outlaw biker on a mission to find his lost lover in a zombie infested world",
-        "img": "./images/days_gone.jpeg",
+        "img": "/images/days_gone.jpeg",
         "location": "/ps5/daysgone.html",
         "checkout": "/checkout.html"
     },
@@ -32,7 +32,7 @@
         "name": "Modern Warfare 2",
         "price": 69.99,
         "description": "Call of Duty's newest edition, Modern Warfare 2 is here, and as usual, jam packed with action and an your favorite characters back ",
-        "img": "./images/mw2.jpeg",
+        "img": "/images/mw2.jpeg",
         "location": "/ps5/mw2.html",
         "checkout": "/checkout.html"
     },
