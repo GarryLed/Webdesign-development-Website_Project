@@ -169,7 +169,7 @@ function handleBuyNowForCardProducts(event) {
                     // persist state of the shopping cart using local storage 
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
-                    window.location.href = "/checkout.html";
+                    window.location.href = "/Webdesign-development-Website_Project/checkout.html";
                 }
             });
         })
