@@ -1,11 +1,10 @@
 // shop.js
-// generate product cards 
+
 // display product cards on page load
 document.addEventListener('DOMContentLoaded', createProductCardsFromJson);
 
 // attatching event listeners to all "Buy Now" buttons
 document.querySelectorAll('.buy-now-btn').forEach(btn => {
-    console.log(btn)
     // some buy-now buttons are in product cards and some are on a specified product page, so I have two functions to address each 
     btn.addEventListener('click', handleBuyNow);
     btn.addEventListener('click', handleBuyNowForCardProducts)
@@ -24,9 +23,6 @@ try {
     console.error("Error parsing shopping cart data:", error);
     shoppingCart = [];
 }
-console.log("Current shopping cart:", shoppingCart);
-
-
 
 // event listeners for adding products to cart 
 document.getElementById('addtocart').addEventListener('click', addToCart)

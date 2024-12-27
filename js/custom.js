@@ -1,10 +1,11 @@
 // custom.js 
-// some basic functionality for login, checkout, userdetails
-// amend and supplement in your project as you see fit
+// Pre exising code: 
 
-document.addEventListener('DOMContentLoaded', function () {
+// some basic functionality for login, checkout, userdetails
+
+document.addEventListener('DOMContentLoaded', function() {
     var loginLogoutElement = document.getElementById('loginlogout');
-    loginLogoutElement.addEventListener('click', function (event) {
+    loginLogoutElement.addEventListener('click', function(event) {
         if (localStorage.getItem('loggedIn') == 1) {
             event.preventDefault();
             Logout();
@@ -16,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // set the checkout figure
-if (localStorage.getItem('checkout') == null) {  
-    localStorage.setItem('checkout',0);
+if (localStorage.getItem('checkout') == null) {
+    localStorage.setItem('checkout', 0);
 }
-var checkout=localStorage.getItem('checkout');
-document.querySelector('#checkout').innerHTML=checkout;
+var checkout = localStorage.getItem('checkout');
+document.querySelector('#checkout').innerHTML = checkout;
 
 // run to update login/
 var logout = document.getElementById('loginlogout');
@@ -31,11 +32,11 @@ logout.addEventListener("click", Logout);
 function Logout() {
 
     // if user is logged in them log them out and redirect to home page
-    var loggedin=localStorage.getItem('loggedIn'); 
+    var loggedin = localStorage.getItem('loggedIn');
     console.log(loggedin)
 
-    if (loggedin==1) {
-        localStorage.setItem('loggedIn',0);
+    if (loggedin == 1) {
+        localStorage.setItem('loggedIn', 0);
         window.location.href = "/index.html";
     } else {
         window.location.href = "/login.html";
@@ -48,27 +49,23 @@ checkLoginStatus()
 
 function checkLoginStatus() {
 
-    
-    var loggedin=localStorage.getItem('loggedIn'); 
+
+    var loggedin = localStorage.getItem('loggedIn');
     var element = document.getElementById("userdetails");
-    if (loggedin==1) {
+    if (loggedin == 1) {
         // change the text from Login to Logout
-        document.querySelector('#loginlogout').innerHTML="LOGOUT";
-        element.classList.remove("d-none");        
-        element.classList.add("d-show");      
-    } else{
+        document.querySelector('#loginlogout').innerHTML = "LOGOUT";
+        element.classList.remove("d-none");
+        element.classList.add("d-show");
+    } else {
         // use add to hide the display of User Details
         //element.classList.add("d-none");        
         //element.classList.remove("d-show");
-        document.querySelector('#loginlogout').innerHTML="LOGIN"; 
+        document.querySelector('#loginlogout').innerHTML = "LOGIN";
         element = document.getElementById("loginlogout");
         element.setAttribute("href", "/login.html");
         var element = document.getElementById("userdetails");
         element.style.display = 'none';
-    } 
+    }
 
 }
-
-
-
-
