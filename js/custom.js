@@ -37,9 +37,9 @@ function Logout() {
 
     if (loggedin == 1) {
         localStorage.setItem('loggedIn', 0);
-        window.location.href = "/Webdesign-development-Website_Project/index.html";
+        window.location.href = "index.html";
     } else {
-        window.location.href = "/Webdesign-development-Website_Project/login.html";
+        window.location.href = "login.html";
     }
 }
 
@@ -63,7 +63,7 @@ function checkLoginStatus() {
         //element.classList.remove("d-show");
         document.querySelector('#loginlogout').innerHTML = "LOGIN";
         element = document.getElementById("loginlogout");
-        element.setAttribute("href", "/Webdesign-development-Website_Project/login.html");
+        element.setAttribute("href", "login.html");
         var element = document.getElementById("userdetails");
         element.style.display = 'none';
     }
