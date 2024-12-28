@@ -126,7 +126,7 @@ function handleBuyNow(event) {
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
                     // redirects user to checkout page 
-                    window.location.href = "/checkout.html";
+                    window.location.href = "/Webdesign-development-Website_Project/data/checkout.html";
                 }
             });
         })
@@ -183,7 +183,7 @@ function handleBuyNowForCardProducts(event) {
 // function to create product cards 
 function createProductCardsFromJson() {
     // fetch the json product data 
-    fetch('./data/products.json')
+    fetch('/Webdesign-development-Website_Project/data/data/products.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error("JSON data could not be found");
