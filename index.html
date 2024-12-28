@@ -101,9 +101,17 @@
         <div class="container-fluid">
             <!-- Carousel image slides every 3 seconds -->
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                
+                <!-- Carousel slide indicators that go in either direction   -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
 
-                <!-- Slides in the carousel -->
+                <!-- Slides in the carousel 
+                d-none will hid carousel captions initially, but they will be displayed on medium-sized devices 
+                with d-md-block
+                -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/ps5controllers.jpg" class="d-block w-100" alt="ps5 controllers">
@@ -251,18 +259,20 @@
             <div class="container">
                 <div class="d-md-flex justify-content-between-align-items-center m-4">
                     <h3 class="mb-3 mb-md-0">Sign Up For Our Neswletter</h3>
+                    <form name="newsletter" action="index.html" method="get" class="input-group-mb-3">
                     <div class="input-group mb-3">
-                        <form name="newsletter" action="index.html" method="get" class="input-group-mb-3">
      
                             <input type="email" class="form-control" placeholder="Enter your Email" aria-label="Users Email Address" name="email" required>
                             
                             <button class="btn btn-primary btn-lg" type="submit" id="button-addon2">Sign Up</button>
-                          </form>
-                </div>
+                        </div>
+                    </form>
 
             </div>
 
         </section>
+
+        
 
   
 
