@@ -41,71 +41,71 @@
         "name": "GTA 5",
         "price": 59.99,
         "description": "GTA 5 is an action-adventure masterpiece where you will be plunged into the chaotic city of San Andreas where you will be the one creating the chaos ",
-        "img": "./images/gta5.jpeg",
-        "location": "/ps4/gta5.html",
-        "checkout": "/checkout.html"
+        "img": "images/gta5.jpeg",
+        "location": "ps4/gta5.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "6",
         "name": "Detroit Become Human",
         "price": 59.99,
         "description": "Detroit Become Human is one of the move submersive si-fi games ever made. Step inside the mind of an android where every choice has consequenses",
-        "img": "./images/detroit.jpeg",
-        "location": "/ps4/dbh.html",
-        "checkout": "/checkout.html"
+        "img": "images/detroit.jpeg",
+        "location": "ps4/dbh.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "7",
         "name": "PS5 Pro",
         "price": 799.99,
         "description": "Playstation 5 Pro is here and and fully loaded with upgraded cpu, graphics card, providing serious gamers with a richer gaming experience",
-        "img": "./images/ps5box.jpeg",
-        "location": "/ps5/ps5pro.html",
-        "checkout": "/checkout.html"
+        "img": "images/ps5box.jpeg",
+        "location": "ps5/ps5pro.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "8",
         "name": "PS5 TLOU Edition",
         "price": 699.99,
         "description": "The Last Of Us Playstation 5 Edition is here. Get this limited edition PS5 jam packed with the last of us easter eggs for the die hard Last of Us gamers out there who want a little piece of gaming history",
-        "img": "/images/ps5box.jpeg",
-        "location": "/ps5/ps5tlouedition.html",
-        "checkout": "/checkout.html"
+        "img": "images/ps5box.jpeg",
+        "location": "ps5/ps5tlouedition.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "9",
         "name": "PS5 Slim",
         "price": 599.99,
         "description": "The Playstation 5 Slim, is only slim on the outside, but it comes packed with an upgraded cpu and 2TB of storage and 120FPS",
-        "img": "./images/ps5box.jpeg",
-        "location": "/ps5/ps5slim.html",
-        "checkout": "/checkout.html"
+        "img": "images/ps5box.jpeg",
+        "location": "ps5/ps5slim.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "13",
         "name": "PS5 Controller",
         "price": 99.99,
         "description": "The official Playstation 5 controller feels like no other. it fits you hand like a glove and will enhance your gaming experience",
-        "img": "./images/controller.jpeg",
-        "location": "/ps5/controller.html",
-        "checkout": "/checkout.html"
+        "img": "images/controller.jpeg",
+        "location": "ps5/controller.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "14",
         "name": "PS5 Custom Controller",
         "price": 299.99,
         "description": "Do you know why the Call Of Duty Pro's are so good? One reason is they know that having a fully custom contorller with paddles make the TTK (time to kill) much much faster",
-        "img": "./images/customps5controller.jpeg",
-        "location": "/ps5/customcontroller.html",
-        "checkout": "/checkout.html"
+        "img": "images/customps5controller.jpeg",
+        "location": "ps5/customcontroller.html",
+        "checkout": "checkout.html"
     },
     {
         "id": "15",
         "name": "PS5 Headphones",
         "price": 59.99,
         "description": "Witness the Playstation 5's newest edition: a fine set of headphones to make your gaming experience all that much more immersive",
-        "img": "./images/headphones.jpeg",
-        "location": "/ps5/headphones.html",
-        "checkout": "/checkout.html"
+        "img": "images/headphones.jpeg",
+        "location": "ps5/headphones.html",
+        "checkout": "checkout.html"
     }
 ]
