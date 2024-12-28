@@ -48,7 +48,7 @@ function addToCart() {
         document.querySelector('#checkout').innerHTML = total;
         var total = localStorage.getItem('checkout');
 
-        fetch('/Webdesign-development-Website_Project/data/products.json')
+        fetch('data/products.json')
             .then(response => response.json())
             .then(productsArray => {
                 // iterate through the array and display product data
