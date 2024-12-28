@@ -126,7 +126,7 @@ function handleBuyNow(event) {
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
                     // redirects user to checkout page 
-                    window.location.href = "data/checkout.html";
+                    window.location.href = "checkout.html";
                 }
             });
         })
