@@ -65,7 +65,7 @@ function checkLoginStatus() {
         element = document.getElementById("loginlogout");
         element.setAttribute("href", "login.html");
         var element = document.getElementById("userdetails");
-        element.style.display = 'none';
+        //element.style.display = 'none';
     }
 
 }
