@@ -48,7 +48,7 @@ function addToCart() {
         document.querySelector('#checkout').innerHTML = total;
         var total = localStorage.getItem('checkout');
 
-        fetch('data/products.json')
+        fetch('/Webdesign-development-Website_Project/data/products.json')
             .then(response => response.json())
             .then(productsArray => {
                 // iterate through the array and display product data
@@ -109,7 +109,7 @@ function handleBuyNow(event) {
     var total = localStorage.getItem('checkout');
 
     // using fetch to fetch the json products data 
-    fetch('data/products.json')
+    fetch('/Webdesign-development-Website_Project/data/products.json')
         .then(response => response.json())
         .then(productsArray => {
             // Iterate through the array and display product data
@@ -126,7 +126,7 @@ function handleBuyNow(event) {
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
                     // redirects user to checkout page 
-                    window.location.href = "data/checkout.html";
+                    window.location.href = "/Webdesign-development-Website_Project/data/checkout.html";
                 }
             });
         })
@@ -153,7 +153,7 @@ function handleBuyNowForCardProducts(event) {
     document.querySelector('#checkout').innerHTML = total;
     var total = localStorage.getItem('checkout');
 
-    fetch('data/products.json')
+    fetch('/Webdesign-development-Website_Project/data/products.json')
         .then(response => response.json())
         .then(productsArray => {
             // Iterate through the array and display product data
@@ -169,7 +169,7 @@ function handleBuyNowForCardProducts(event) {
                     // persist state of the shopping cart using local storage 
                     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 
-                    window.location.href = "checkout.html";
+                    window.location.href = "/Webdesign-development-Website_Project/checkout.html";
                 }
             });
         })
@@ -183,7 +183,7 @@ function handleBuyNowForCardProducts(event) {
 // function to create product cards 
 function createProductCardsFromJson() {
     // fetch the json product data 
-    fetch('data/products.json')
+    fetch('/Webdesign-development-Website_Project/data/products.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error("JSON data could not be found");
