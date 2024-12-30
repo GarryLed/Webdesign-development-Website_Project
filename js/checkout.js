@@ -8,7 +8,7 @@ const shoppingCart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
 var checkout = document.getElementById('buy-now');
 // add a listener for add to cart if such a button id is pressed
 
-// display order summary function 
+// display order summary function that displays all itmes in the shopping cart 
 function displayOrderSummary() {
     // get an element by its id for order summary container 
     const orderSummary = document.getElementById('order-summary');

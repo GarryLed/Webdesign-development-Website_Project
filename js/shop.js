@@ -1,6 +1,6 @@
 // shop.js
 
-// display product cards on page load
+// create and display product cards on page load
 document.addEventListener('DOMContentLoaded', createProductCardsFromJson);
 
 // attatching event listeners to all "Buy Now" buttons
@@ -95,7 +95,7 @@ function displayAddToCartModal() {
 function handleBuyNow(event) {
     const button = event.target;
 
-    // div container 
+    // determining the parent element  
     const productDetailsContainer = button.closest('.product').parentElement;
     const productNameElement = productDetailsContainer.querySelector('.product-name')
     const productID = productNameElement.getAttribute('id');
@@ -193,7 +193,7 @@ function createProductCardsFromJson() {
         .then(shopProducts => {
             const productCards = document.querySelectorAll('.card[id]');
 
-            // loop through 
+            // loop through data 
             productCards.forEach(card => {
                 
                 const productID = card.getAttribute('id');

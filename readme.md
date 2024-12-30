@@ -48,24 +48,24 @@ Pasword: password1
 product id in a JSON file, where the product data is stored, and the cards are creted dynamically. Each product card has a nice yellow border. 
 
 **Forms**
-Bootstrap was used for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
+- Bootstrap was used for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
 
 **Layout and Grid System**
-Each page uses the `container`, `row`, `col` grid system as its structure, and I used breakpoints using bootstrap: `col-md-12` `col-md-6` etc. Additioanlly columns were styled with padding and margins using bootstrap: `m-2` for margins and `p-3` for padding. 
+- Each page uses the `container`, `row`, `col` grid system as its structure, and I used breakpoints using bootstrap: `col-md-12` `col-md-6` etc. Additioanlly columns were styled with padding and margins using bootstrap: `m-2` for margins and `p-3` for padding. 
 
 **Buttons**
-Bootstrap buttons were used throughout the site: "Buy Now", "Learn More", "Add to Cart", "Submit", "Checkout" etc. 
+- Bootstrap buttons were used throughout the site: "Buy Now", "Learn More", "Add to Cart", "Submit", "Checkout" etc. 
 Initially all these buttons were the standard Bootstrap colours, but I used SASS to override these colours to give the website less bootstrappy feel. 
 **Overriding Bootstrap with scss**
 
 **SCSS customisations**
-I used SCSS for customisiation to customise Bootstraps default variables. I created a `_variables.scss` file and assigned the followng varialbes to differenc colours: 
-$primary,
-$secondary, 
-$background, 
-$accent, 
-$text, 
-$muted. 
+- I used SCSS for customisiation to customise Bootstraps default variables. I created a `_variables.scss` file and assigned the followng varialbes to differenc colours: 
+- $primary,
+- $secondary, 
+- $background, 
+- $accent, 
+- $text, 
+- $muted. 
 
 Once I had the colours and variables setup, I created a `_bootstrap_override` file to reassign the variables for the background, text, buttons and links on the site, like this: 
 
@@ -90,7 +90,8 @@ $link-hover-color: darken($primary, 10%);
 [List the major breakpoints in your work  and describe what  changes at the breakpoint. Did you implement any minor tweaks at these breakpoints using media query techniques? e.g. font size changes, hiding of content, responsive images using srcset, etc?]
 
 ### Extra Small Devices (XS)
- --bs-breakpoint-xs: 0; (Bootstrap)
+ - bs-breakpoint-xs: 0; (Bootstrap)
+
 Changes at this breakpoint: 
 - Navbar collapses into hamburger menu 
 - Product cards are placed vertically 
@@ -98,14 +99,15 @@ Changes at this breakpoint:
 - Form labels are placed on top of input fields so the screen looks cleaner and less cluttered 
 
 ### Small Devices (SM)
- --bs-breakpoint-sm: 576px; (bootstrap)
+ -bs-breakpoint-sm: 576px; (bootstrap)
+
 Changes at this breakpoint: 
 - Carousel captions are hidden because the screen would look cluttered 
 - Headings are made smalller to fit screen 
 
-
 ### Medium Devices (MD)
-  --bs-breakpoint-md: 768px;
+-bs-breakpoint-md: 768px;
+
  Changes at this breakpoint: 
  - Product cards are displayed in a two column layout
  - Navbar items are visable 
@@ -118,7 +120,7 @@ Changes at this breakpoint:
 - 
 
 ### Extra Large Devices (XL)
-  --bs-breakpoint-xl: 1200px;
+-bs-breakpoint-xl: 1200px;
 Changes at this breakpoint: 
 
 ### Media Queries 
