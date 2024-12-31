@@ -46,7 +46,7 @@ product id in a products JSON file, where the product data is stored, and the ca
 - I used Bootstrap for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
 
 **Layout and Grid System**
-- Each page uses the `container`, `row`, `col` grid system as its structure, and I used breakpoints using bootstrap: `col-md-12` `col-md-6` etc. Additioanlly columns were styled with padding and margins using bootstrap: `m-2` for margins and `p-3` for padding. 
+- Each page uses the `container`, `row`, `col` grid system as its structure, and I used grid-breakpoints using bootstrap: `col-md-12` `col-md-6` etc. Additioanlly columns were styled with padding and margins using bootstrap spacing units. On top of these, I used bootstraps flexbox options for displaying responsive elements on the page
 
 **Buttons**
 - Bootstrap buttons were used throughout the site: "Buy Now", "Learn More", "Add to Cart", "Submit", "Checkout" etc. 
@@ -54,7 +54,7 @@ Initially all these buttons were the standard Bootstrap colours, but I used SASS
 **Overriding Bootstrap with scss**
 
 **SCSS customisations**
-- I used SCSS for customisiation to customise Bootstraps default variables. I created a `_variables.scss` file and assigned the followng varialbes to differenc colours: 
+- I used SCSS for customisiation to customise Bootstraps default variables. I created a `_variables.scss` file and assigned the followng varialbes to differen colours: 
 - $primary,
 - $secondary, 
 - $background, 
@@ -86,26 +86,31 @@ $link-color: $primary; (set the links to a new colour and gave them a hover affe
 $link-hover-color: darken($primary, 10%);
 
 ## 4.2 Breakpoints
-[List the major breakpoints in your work  and describe what  changes at the breakpoint. Did you implement any minor tweaks at these breakpoints using media query techniques? e.g. font size changes, hiding of content, responsive images using srcset, etc?]
+
 
 ### Extra Small Devices (XS)
- - bs-breakpoint-xs: 0; (Bootstrap)
+ -breakpoint-xs: 0; (Bootstrap)
 
 Changes at this breakpoint: 
+
 - Navbar collapses into hamburger menu 
 - Product cards are placed vertically 
 - Images shrink to fit the inside their containers 
 - Form labels are placed on top of input fields so the screen looks cleaner and less cluttered 
 
 ### Small Devices (SM)
- -bs-breakpoint-sm: 576px; (bootstrap)
+ -breakpoint-sm: 576px; (bootstrap)
 
 Changes at this breakpoint: 
+
+- Navbar collapses into hamburger menu 
+- Images shrink to fit the inside their containers 
+- Form labels are placed on top of input fields so the screen looks cleaner and less cluttered 
 - Carousel captions are hidden because the screen would look cluttered 
 - Headings are made smalller to fit screen 
 
 ### Medium Devices (MD)
--bs-breakpoint-md: 768px;
+-breakpoint-md: 768px;
 
  Changes at this breakpoint: 
  - Product cards are displayed in a two column layout
@@ -113,33 +118,27 @@ Changes at this breakpoint:
  - Carousel captions are displayed 
 
 ### Large Devices (LG)
-  --bs-breakpoint-lg: 992px;
+-breakpoint-lg: 992px;
 Changes at this breakpoint: 
 - Product cards are displayed in a three coloumn layout 
-- 
-
-### Extra Large Devices (XL)
--bs-breakpoint-xl: 1200px;
-Changes at this breakpoint: 
-
-### Media Queries 
 
 # 5. Performance
 [Explain what you have done to improve the performance of your site, and any changes you could make for a production site.]
 
 I imporved performance of the site in a few ways: 
 1. Loading CSS at the top of each page, but loading JavaScript at the bottom of each page, which will help the pages load faster.
-3. Optimizing images by resizing them and makeing them smaller 
+2. Optimizing images by resizing them and makeing them smaller
+3. Minifying JavaScript and CSS files 
  
 # 6. SEO
-[Explain what you have done to improve the SEO of your site. Illustrate with screenshot examples from your code]
 1. Image optimisation 
 2. Meta tags 
 3. Title optimisation for each page
 4. Meta Description 
 5. Keywords on each page 
-6. Page speed 
+6. Internal Links 
 7. Image alt text 
+8. Target keywords in description 
 
 
 # 7. Accessibility
@@ -163,7 +162,10 @@ Additonally, I was going to add a light/dark mode, but after researching some ga
 
 Write briefly under the following headings:
 #### What went well?
-- 
+- Overall look and feel of the webiste 
+- Shopping cart page that displays each item, it's price and a total price for all products in the shopping cart 
+- Dynamically creating products using JavaScript and JSON 
+
 
 #### What did not go well and if so what would you differently?
 - user details 
