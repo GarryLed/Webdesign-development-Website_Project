@@ -1,5 +1,7 @@
 // userdetails.js
 
+//=============== I didn't touch this JavaScript ====================================
+
 if (localStorage.getItem('userdetails') === null) {  
   // if userdetails is null, that means it has not been loaded before. we not initialise userdetails object
   var userDetails = {firstName:"Walter", lastName:"Mitty", dob:"1990-12-01",address1:"Buenos Ayres Drive", address2:"Strandhill", address3:"Co. Sligo"};

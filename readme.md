@@ -13,12 +13,9 @@
 9. Reflection on your work	2
 
 # 1. Introduction
-[Briefly describe what you have designed the site for and what it does]
+The website I designed for this project is an e-commerce site that sells video games, consoles, and gaming accessories. I called the site "Good Games," which is a nod to the gaming community where us gamers typically say "GG" or Good Game" after playing our favorite games online. The products on the website range from the latest video game releases and best sellers to the all-time classic titles. Good Games also sells consoles and gaming accessories.
 
-
-The website I designed for this project is an e-commerce site that sells video games, consoles, and gaming accessories. I called the site "Good Games", which is a nod to the gaming community where us gamers typically say "GG" or Good Game" after playing our favorite games online. The products on the website range form the latest video game releases, best sellers to the all time classic titles. Good Games also sells consoles, and gaming accessories. 
-
-The site has a modern design, is mobile responsive with a user first interface, and has a fully functional shopping cart system. Some of the key features of the site include dynamic product creation where all products are created using javaScript, an interactive shopping cart that and a pop up that asks the user if they want to go to the cart or continue shopping when an item is added to their cart and main navigation categories with dropdown menu's for subcategories. 
+The site has a modern design, is mobile responsive with a user-first interface, and has a fully functional shopping cart system. Some of the key features of the site include dynamic product creation, where all products are created using JavaScript. In addition to the products, I used JavaScript to create an interactive shopping cart that includes a pop-up that asks the user if they want to go to the cart or continue shopping when an item is added to their cart, and there is a shopping cart page that displays a list of products the customer has in their cart. Also on the shopping cart page, there is a link to the checkout page, which also displays an order summary before prompting the user to insert their payment details. Another feature includes navigation categories with dropdown menus that display additional subcategories.
 
 # 2. Link to Github Pages
 
@@ -48,7 +45,7 @@ Pasword: password1
 product id in a JSON file, where the product data is stored, and the cards are creted dynamically. Each product card has a nice yellow border. 
 
 **Forms**
-- Bootstrap was used for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
+- I used Bootstrap for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
 
 **Layout and Grid System**
 - Each page uses the `container`, `row`, `col` grid system as its structure, and I used breakpoints using bootstrap: `col-md-12` `col-md-6` etc. Additioanlly columns were styled with padding and margins using bootstrap: `m-2` for margins and `p-3` for padding. 

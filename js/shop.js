@@ -191,15 +191,19 @@ function createProductCardsFromJson() {
             return response.json();
         })
         .then(shopProducts => {
+            // gets all the product card ids and stores them in an array to loop through 
+            // and create each product card based on the product id 
             const productCards = document.querySelectorAll('.card[id]');
 
-            // loop through data 
+            // loop
             productCards.forEach(card => {
-                
+                // create a product card for each product 
                 const productID = card.getAttribute('id');
-                console.log(productID)
+                
+                // find the corrosponding product id in the products JSON data file 
                 const productData = shopProducts.find(product => product.id === productID);
                 if (productData) {
+                    // using query selector to select elements and assigning variables to them 
                     const imgElement = card.querySelector('.card-img-top');
                     const titleElement = card.querySelector('.card-title');
                     const textElement = card.querySelector('.card-text');
@@ -207,6 +211,7 @@ function createProductCardsFromJson() {
                     const learnMoreBtn = card.querySelector('.learn-more-btn');
                     const buyNowBtn = card.querySelector('.buy-now-btn');
 
+                    // assign the values to the product JSON data 
                     imgElement.src = productData.img;
                     imgElement.alt = productData.name;
                     titleElement.textContent = productData.name;
