@@ -1,16 +1,16 @@
 # Project Report for Web Design & Development
 ## Contents
-1. Introduction	1
-2. Link to Github Pages	1
-3. Installation/Usage	1
-4. Design Decisions Made	1
-      - Look and Feel	1
-    - Breakpoints	1
-5. Performance	2
-6. SEO	2
-7. Accessibility	2
-8. Wireframes	2
-9. Reflection on your work	2
+1. Introduction	
+2. Link to Github Pages	
+3. Installation/Usage	
+4. Design Decisions Made	
+      - Look and Feel	
+    - Breakpoints	
+5. Performance	
+6. SEO	
+7. Accessibility	
+8. Wireframes	
+9. Reflection on your work	
 
 # 1. Introduction
 The website I designed for this project is an e-commerce site that sells video games, consoles, and gaming accessories. I called the site "Good Games," which is a nod to the gaming community where us gamers typically say "GG" or Good Game" after playing our favorite games online. The products on the website range from the latest video game releases and best sellers to the all-time classic titles. Good Games also sells consoles and gaming accessories.
@@ -22,8 +22,6 @@ The site has a modern design, is mobile responsive with a user-first interface, 
 [GitHub Repo for Project](https://github.com/GarryLed/Webdesign-development-Website_Project)
 
 # 3. Installation/Usage
-[Add in here any specific details that will allow the lecturer to test your work – e.g. Username/password combo to “allow” login of the prototype. Also add in any missing elements, functionality not working, etc]
-
 I used the default login details form the project: 
 
 User email: wmitty@email.com"
@@ -41,8 +39,8 @@ Pasword: password1
 - Homepage carosoul was created using bootstrap which displays three scrolling images and text for a clear description of what the site is about.  
 
 **Cards** (Product cards)
-- JavaScript and Bootstrap card components were used to create dynamic product cards for products throughout the site. Each card is uses an unique id that matches the
-product id in a JSON file, where the product data is stored, and the cards are creted dynamically. Each product card has a nice yellow border. 
+- JavaScript, JSON and Bootstrap were all used to create dynamic product cards for products throughout the site. Each product card uses an unique id (product id) that matches the
+product id in a products JSON file, where the product data is stored, and the cards are creted dynamically on page load.Each product card has a nice yellow border, a darker backgound with orange buttons that stand out. 
 
 **Forms**
 - I used Bootstrap for the forms on the website: login, newsletter, checkkout, and contact pages. I used form labels for a clean look to the form, and placeholder text that dissapears when the user inputs text for better usability. 
@@ -66,21 +64,25 @@ Initially all these buttons were the standard Bootstrap colours, but I used SASS
 
 Once I had the colours and variables setup, I created a `_bootstrap_override` file to reassign the variables for the background, text, buttons and links on the site, like this: 
 
-// background and text (set the background and the text of the site)
+// background and text (set the background and the text colour of the site)
+
 $body-bg: $background;
 $body-color: $text;
 
-// buttons primary (set the primary buttons on the site)
+// buttons primary (set the colour of the primary buttons on the site)
+
 $btn-primary-bg: $primary;
 $btn-primary-border: $primary;
 $btn-primary-color: $text;
 
-// buttons secondary (set the secondary buttons)
+// buttons secondary (set the colour of  the secondary buttons)
+
 $btn-secondary-bg: $secondary;
 $btn-secondary-border: $secondary;
 $btn-secondary-color: $background;
 
 $link-color: $primary; (set the links to a new colour and gave them a hover affect)
+
 $link-hover-color: darken($primary, 10%);
 
 ## 4.2 Breakpoints
